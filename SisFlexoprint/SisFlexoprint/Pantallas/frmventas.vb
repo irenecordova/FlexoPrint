@@ -27,12 +27,12 @@ Public Class frmventas
     End Sub
 
     Private Sub btbuscars_Click(sender As Object, e As EventArgs) Handles btbuscars.Click
-        frmservicio.txtbandera.Text = "1"
+        frmproducto.txtbandera.Text = "1"
         frmcontenedor.pnpantallas.Controls.Clear()
-        frmservicio.TopLevel = False
-        frmservicio.Visible = True
-        frmcontenedor.pnpantallas.Controls.Add(frmservicio)
-        frmservicio.Show()
+        frmproducto.TopLevel = False
+        frmproducto.Visible = True
+        frmcontenedor.pnpantallas.Controls.Add(frmproducto)
+        frmproducto.Show()
     End Sub
 
     Private Sub checkgenerico_CheckedChanged(sender As Object, e As EventArgs) Handles checkgenerico.CheckedChanged
@@ -46,13 +46,8 @@ Public Class frmventas
         End If
     End Sub
 
-    Private Sub btbuscarp_Click(sender As Object, e As EventArgs) Handles btbuscarp.Click
-        frmproducto.txtbandera.Text = "1"
-        frmcontenedor.pnpantallas.Controls.Clear()
-        frmproducto.TopLevel = False
-        frmproducto.Visible = True
-        frmcontenedor.pnpantallas.Controls.Add(frmproducto)
-        frmproducto.Show()
+    Private Sub btbuscarp_Click(sender As Object, e As EventArgs)
+
     End Sub
 
     Private Sub modificar_columnas()
@@ -121,7 +116,7 @@ Public Class frmventas
 
 
 
-    Private Sub btnguardar_Click(sender As Object, e As EventArgs) Handles btnguardar.Click
+    Private Sub btnguardar_Click(sender As Object, e As EventArgs)
         If Me.ValidateChildren = True And txtidcliente.Text <> "" And txtnombrec.Text <> "" Then
             Try
                 Dim dts As New vventa
@@ -253,11 +248,6 @@ Public Class frmventas
         txtprecios.Text = ""
         txtidservicio.Text = ""
         txtcantidads.Text = "1"
-        txtcantidadp.Text = ""
-        txtproducto.Text = ""
-        txtstock.Text = "1"
-        txtpreciop.Text = ""
-        txtcantidadp.Text = "1"
         dgvservicios.DataSource = Nothing
         dgvservicios.ColumnHeadersVisible = False
         dgvproductos.DataSource = Nothing
@@ -268,9 +258,7 @@ Public Class frmventas
         buscar()
     End Sub
 
-    Private Sub btnnuevo_Click(sender As Object, e As EventArgs) Handles btnnuevo.Click
-        limpiar()
-    End Sub
+
 
     Private Sub dgvlistado_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvlistado.CellClick
         limpiar()
@@ -347,35 +335,23 @@ Public Class frmventas
         End If
     End Sub
 
-    Private Sub btagregarp_Click(sender As Object, e As EventArgs) Handles btagregarp.Click
-        If Me.ValidateChildren = True And txtidventa.Text <> "" And txtproducto.Text <> "" And txtcantidadp.Text <> "" And txtpreciop.Text <> "" Then
+    Private Sub btagregarp_Click(sender As Object, e As EventArgs)
+        If Me.ValidateChildren = True And txtidventa.Text <> "" Then
             Try
                 Dim dts As New vdetalleproducto
                 Dim func As New fdetalleproducto
 
                 dts.gidventa = txtidventa.Text
                 dts.gidproducto = txtidproducto.Text
-                dts.gcantidad = txtcantidadp.Text
-                dts.gpreciounitario = txtpreciop.Text
 
                 If func.ingresar(dts) Then
                     mostrar()
                     mostrarproductos()
-                    txtcantidadp.Text = ""
-                    txtproducto.Text = ""
-                    txtstock.Text = "1"
-                    txtpreciop.Text = ""
-                    txtcantidadp.Text = "1"
                     txtidproducto.Text = ""
                 Else
                     MessageBox.Show("No se pudo completar el registro", "Guardando Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
                     mostrar()
                     mostrarproductos()
-                    txtcantidadp.Text = ""
-                    txtproducto.Text = ""
-                    txtstock.Text = "1"
-                    txtpreciop.Text = ""
-                    txtcantidadp.Text = "1"
                     txtidproducto.Text = ""
                 End If
             Catch ex As Exception
@@ -390,7 +366,7 @@ Public Class frmventas
         txtnombrec.Text = txthora.Text
     End Sub
 
-    Private Sub btneliminar_Click(sender As Object, e As EventArgs) Handles btneliminar.Click
+    Private Sub btneliminar_Click(sender As Object, e As EventArgs)
         Dim result As DialogResult
 
         result = MessageBox.Show("¿Desea eliminar la venta?", "Modificando Datos", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
@@ -422,5 +398,9 @@ Public Class frmventas
                 MessageBox.Show("Datos incompletos. Llene los campos obligatorios.", "Guardando Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
             End If
         End If
+    End Sub
+
+    Private Sub btnnuevo_Click(sender As Object, e As EventArgs) Handles btnnuevo.Click
+        limpiar()
     End Sub
 End Class

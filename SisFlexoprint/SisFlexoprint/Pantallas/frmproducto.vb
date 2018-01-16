@@ -133,15 +133,12 @@ Public Class frmproducto
     Private Sub dgvlistado_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvlistado.CellDoubleClick
         If txtbandera.Text = "1" Then
             frmventas.txtidproducto.Text = dgvlistado.SelectedCells.Item(0).Value.ToString
-            frmventas.txtpreciop.Text = dgvlistado.SelectedCells.Item(4).Value.ToString
-            frmventas.txtstock.Text = dgvlistado.SelectedCells.Item(5).Value.ToString
             txtbandera.Text = "0"
             frmcontenedor.pnpantallas.Controls.Clear()
             frmventas.TopLevel = False
             frmventas.Visible = True
             frmcontenedor.pnpantallas.Controls.Add(frmventas)
             frmventas.Show()
-            frmventas.txtcantidadp.Maximum = frmventas.txtstock.Text
             Me.Close()
         End If
     End Sub
@@ -186,6 +183,40 @@ Public Class frmproducto
         desbloquearbtn()
         btneditar.Enabled = False
         btneliminar.Enabled = False
+    End Sub
+
+    Private Sub btneliminar_Click(sender As Object, e As EventArgs) Handles btneliminar.Click
+        txtbuscar.Select()
+        Dim result As DialogResult
+
+        result = MessageBox.Show("¿Desea eliminar los datos?", "Modificando Datos", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
+
+        If result = DialogResult.OK Then
+
+            If Me.ValidateChildren = True And txtprecio.Text <> "" And txtdescripcion.Text <> "" And txtstock.Text <> "" Then
+                Try
+                    Dim dts As New vproducto
+                    Dim func As New fproducto
+
+                    dts.gidproducto = dgvlistado.SelectedCells.Item(0).Value
+
+                    If func.eliminar(dts) Then
+                        MessageBox.Show("Eliminar completado.", "Eliminando Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                        mostrar()
+                        limpiar()
+                        bloqueartext()
+                        bloquearbtn()
+                        btnnuevo.Enabled = True
+                    Else
+                        MessageBox.Show("No se pudo completar la eliminación.", "Eliminando Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    End If
+                Catch ex As Exception
+                    MsgBox(ex.Message)
+                End Try
+            Else
+                MessageBox.Show("Datos incompletos. Llene los campos obligatorios.", "Guardando Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            End If
+        End If
     End Sub
 
     Private Sub btnguardar_Click(sender As Object, e As EventArgs) Handles btnguardar.Click
@@ -261,45 +292,10 @@ Public Class frmproducto
         btneliminar.Enabled = False
     End Sub
 
-    Private Sub btneliminar_Click(sender As Object, e As EventArgs) Handles btneliminar.Click
-        txtbuscar.Select()
-        Dim result As DialogResult
-
-        result = MessageBox.Show("¿Desea eliminar los datos?", "Modificando Datos", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
-
-        If result = DialogResult.OK Then
-
-            If Me.ValidateChildren = True And txtprecio.Text <> "" And txtdescripcion.Text <> "" And txtstock.Text <> "" Then
-                Try
-                    Dim dts As New vproducto
-                    Dim func As New fproducto
-
-                    dts.gidproducto = dgvlistado.SelectedCells.Item(0).Value
-
-                    If func.eliminar(dts) Then
-                        MessageBox.Show("Eliminar completado.", "Eliminando Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                        mostrar()
-                        limpiar()
-                        bloqueartext()
-                        bloquearbtn()
-                        btnnuevo.Enabled = True
-                    Else
-                        MessageBox.Show("No se pudo completar la eliminación.", "Eliminando Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                    End If
-                Catch ex As Exception
-                    MsgBox(ex.Message)
-                End Try
-            Else
-                MessageBox.Show("Datos incompletos. Llene los campos obligatorios.", "Guardando Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            End If
-        End If
-    End Sub
-
     Private Sub btncancelar_Click(sender As Object, e As EventArgs) Handles btncancelar.Click
         txtbuscar.Select()
         bloqueartext()
         bloquearbtn()
         btnnuevo.Enabled = True
     End Sub
-
 End Class

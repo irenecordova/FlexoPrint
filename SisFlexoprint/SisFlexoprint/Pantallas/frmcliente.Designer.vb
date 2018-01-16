@@ -23,7 +23,7 @@ Partial Class frmcliente
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.dgvlistado = New System.Windows.Forms.DataGridView()
         Me.txtbuscar = New System.Windows.Forms.TextBox()
         Me.pandatosprin = New System.Windows.Forms.Panel()
@@ -70,12 +70,12 @@ Partial Class frmcliente
         Me.dgvlistado.Name = "dgvlistado"
         Me.dgvlistado.ReadOnly = True
         Me.dgvlistado.RowHeadersVisible = False
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(72, Byte), Integer), CType(CType(90, Byte), Integer))
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(55, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(73, Byte), Integer))
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        Me.dgvlistado.RowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(72, Byte), Integer), CType(CType(90, Byte), Integer))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(55, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(73, Byte), Integer))
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        Me.dgvlistado.RowsDefaultCellStyle = DataGridViewCellStyle2
         Me.dgvlistado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvlistado.Size = New System.Drawing.Size(381, 470)
         Me.dgvlistado.TabIndex = 1
@@ -277,7 +277,7 @@ Partial Class frmcliente
         Me.btncancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray
         Me.btncancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btncancelar.ForeColor = System.Drawing.Color.Gainsboro
-        Me.btncancelar.Location = New System.Drawing.Point(889, 471)
+        Me.btncancelar.Location = New System.Drawing.Point(901, 470)
         Me.btncancelar.Name = "btncancelar"
         Me.btncancelar.Size = New System.Drawing.Size(66, 66)
         Me.btncancelar.TabIndex = 11
@@ -293,7 +293,7 @@ Partial Class frmcliente
         Me.btnguardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray
         Me.btnguardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnguardar.ForeColor = System.Drawing.Color.Gainsboro
-        Me.btnguardar.Location = New System.Drawing.Point(704, 470)
+        Me.btnguardar.Location = New System.Drawing.Point(701, 470)
         Me.btnguardar.Name = "btnguardar"
         Me.btnguardar.Size = New System.Drawing.Size(66, 66)
         Me.btnguardar.TabIndex = 10
@@ -309,7 +309,7 @@ Partial Class frmcliente
         Me.btneditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray
         Me.btneditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btneditar.ForeColor = System.Drawing.Color.Transparent
-        Me.btneditar.Location = New System.Drawing.Point(605, 471)
+        Me.btneditar.Location = New System.Drawing.Point(601, 470)
         Me.btneditar.Name = "btneditar"
         Me.btneditar.Size = New System.Drawing.Size(66, 66)
         Me.btneditar.TabIndex = 9
@@ -325,7 +325,7 @@ Partial Class frmcliente
         Me.btneliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray
         Me.btneliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btneliminar.ForeColor = System.Drawing.Color.Gainsboro
-        Me.btneliminar.Location = New System.Drawing.Point(801, 473)
+        Me.btneliminar.Location = New System.Drawing.Point(801, 470)
         Me.btneliminar.Name = "btneliminar"
         Me.btneliminar.Size = New System.Drawing.Size(66, 66)
         Me.btneliminar.TabIndex = 12
@@ -343,7 +343,7 @@ Partial Class frmcliente
         Me.btnnuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnnuevo.ForeColor = System.Drawing.Color.Transparent
         Me.btnnuevo.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.btnnuevo.Location = New System.Drawing.Point(510, 470)
+        Me.btnnuevo.Location = New System.Drawing.Point(501, 470)
         Me.btnnuevo.Name = "btnnuevo"
         Me.btnnuevo.Size = New System.Drawing.Size(66, 66)
         Me.btnnuevo.TabIndex = 8

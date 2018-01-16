@@ -192,7 +192,21 @@ Public Class frmempleado
         End If
     End Sub
 
-    Private Sub btnnuevo_Click(sender As Object, e As EventArgs)
+    Private Sub dgvlistado_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvlistado.CellDoubleClick
+        If txtbandera.Text = "1" Then
+            frmventas.txtidempleado.Text = dgvlistado.SelectedCells.Item(0).Value.ToString
+            frmventas.txtempleado.Text = dgvlistado.SelectedCells.Item(1).Value.ToString
+            txtbandera.Text = "0"
+            frmcontenedor.pnpantallas.Controls.Clear()
+            frmventas.TopLevel = False
+            frmventas.Visible = True
+            frmcontenedor.pnpantallas.Controls.Add(frmventas)
+            frmventas.Show()
+            Me.Close()
+        End If
+    End Sub
+
+    Private Sub btnnuevo_Click_1(sender As Object, e As EventArgs) Handles btnnuevo.Click
         limpiar()
         desbloqueartext()
         save_edit = 1
@@ -201,7 +215,13 @@ Public Class frmempleado
         btneliminar.Enabled = False
     End Sub
 
-    Private Sub btneditar_Click(sender As Object, e As EventArgs)
+    Private Sub btncancelar_Click_1(sender As Object, e As EventArgs) Handles btncancelar.Click
+        bloqueartext()
+        bloquearbtn()
+        btnnuevo.Enabled = True
+    End Sub
+
+    Private Sub btneditar_Click(sender As Object, e As EventArgs) Handles btneditar.Click
         desbloqueartext()
         save_edit = 0
         desbloquearbtn()
@@ -209,7 +229,7 @@ Public Class frmempleado
         btneliminar.Enabled = False
     End Sub
 
-    Private Sub btnguardar_Click(sender As Object, e As EventArgs)
+    Private Sub btnguardar_Click(sender As Object, e As EventArgs) Handles btnguardar.Click
         If save_edit = 1 Then
             If Me.ValidateChildren = True And txtnombre.Text <> "" And txtapellido.Text <> "" And txtdireccion.Text <> "" And txttelefono.Text <> "" And txtcedula.Text <> "" Then
                 Try
@@ -282,7 +302,7 @@ Public Class frmempleado
         End If
     End Sub
 
-    Private Sub btneliminar_Click(sender As Object, e As EventArgs)
+    Private Sub btneliminar_Click(sender As Object, e As EventArgs) Handles btneliminar.Click
         Dim result As DialogResult
 
         result = MessageBox.Show("¿Desea eliminar los datos?", "Modificando Datos", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
@@ -313,39 +333,5 @@ Public Class frmempleado
                 MessageBox.Show("Datos incompletos. Llene los campos obligatorios.", "Guardando Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
             End If
         End If
-    End Sub
-
-    Private Sub dgvlistado_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvlistado.CellDoubleClick
-        If txtbandera.Text = "1" Then
-            frmventas.txtidempleado.Text = dgvlistado.SelectedCells.Item(0).Value.ToString
-            frmventas.txtempleado.Text = dgvlistado.SelectedCells.Item(1).Value.ToString
-            txtbandera.Text = "0"
-            frmcontenedor.pnpantallas.Controls.Clear()
-            frmventas.TopLevel = False
-            frmventas.Visible = True
-            frmcontenedor.pnpantallas.Controls.Add(frmventas)
-            frmventas.Show()
-            Me.Close()
-        End If
-    End Sub
-
-    Private Sub btncancelar_Click(sender As Object, e As EventArgs)
-        bloqueartext()
-        bloquearbtn()
-        btnnuevo.Enabled = True
-    End Sub
-
-    Private Sub btnnuevo_Click(sender As Object, e As EventArgs)
-        limpiar()
-        desbloqueartext()
-        save_edit = 1
-        desbloquearbtn()
-        btneditar.Enabled = False
-        btneliminar.Enabled = False
-
-    End Sub
-
-    Private Sub btnnuevo_Click_1(sender As Object, e As EventArgs) Handles btnnuevo.Click
-
     End Sub
 End Class
