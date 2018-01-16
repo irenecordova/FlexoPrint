@@ -24,13 +24,9 @@ Partial Class frmcontenedor
     Private Sub InitializeComponent()
         Me.pnbotones = New System.Windows.Forms.Panel()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.btconfiguracion = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.btventas = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.btempleados = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.btclientes = New System.Windows.Forms.Button()
         Me.pnlogin = New System.Windows.Forms.Panel()
         Me.btsalir = New System.Windows.Forms.Button()
         Me.btingresar = New System.Windows.Forms.Button()
@@ -40,19 +36,17 @@ Partial Class frmcontenedor
         Me.txtuser = New System.Windows.Forms.TextBox()
         Me.pnbotones2 = New System.Windows.Forms.Panel()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.btcerrar = New System.Windows.Forms.Button()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.btproductos = New System.Windows.Forms.Button()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.btservicios = New System.Windows.Forms.Button()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.btvendedor = New System.Windows.Forms.Button()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.btproveedor = New System.Windows.Forms.Button()
-        Me.pnpantallas = New System.Windows.Forms.Panel()
-        Me.pblogo = New System.Windows.Forms.PictureBox()
         Me.btminimizar = New System.Windows.Forms.Button()
         Me.btexit = New System.Windows.Forms.Button()
+        Me.btconfiguracion = New System.Windows.Forms.Button()
+        Me.btventas = New System.Windows.Forms.Button()
+        Me.btempleados = New System.Windows.Forms.Button()
+        Me.btclientes = New System.Windows.Forms.Button()
+        Me.btcerrar = New System.Windows.Forms.Button()
+        Me.btproductos = New System.Windows.Forms.Button()
+        Me.pnpantallas = New System.Windows.Forms.Panel()
+        Me.pblogo = New System.Windows.Forms.PictureBox()
         Me.pnbotones.SuspendLayout()
         Me.pnlogin.SuspendLayout()
         Me.pnbotones2.SuspendLayout()
@@ -89,21 +83,6 @@ Partial Class frmcontenedor
         Me.Label4.Text = "Settings"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
-        'btconfiguracion
-        '
-        Me.btconfiguracion.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.btconfiguracion.BackgroundImage = Global.SisGabinete.My.Resources.Resources.Configuración
-        Me.btconfiguracion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.btconfiguracion.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btconfiguracion.FlatAppearance.BorderSize = 0
-        Me.btconfiguracion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.btconfiguracion.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btconfiguracion.Location = New System.Drawing.Point(15, 529)
-        Me.btconfiguracion.Name = "btconfiguracion"
-        Me.btconfiguracion.Size = New System.Drawing.Size(50, 50)
-        Me.btconfiguracion.TabIndex = 43
-        Me.btconfiguracion.UseVisualStyleBackColor = False
-        '
         'Label5
         '
         Me.Label5.AutoSize = True
@@ -116,20 +95,6 @@ Partial Class frmcontenedor
         Me.Label5.TabIndex = 40
         Me.Label5.Text = "Ventas"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.TopCenter
-        '
-        'btventas
-        '
-        Me.btventas.BackColor = System.Drawing.SystemColors.AppWorkspace
-        Me.btventas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.btventas.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btventas.FlatAppearance.BorderSize = 0
-        Me.btventas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.btventas.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btventas.Location = New System.Drawing.Point(15, 29)
-        Me.btventas.Name = "btventas"
-        Me.btventas.Size = New System.Drawing.Size(50, 50)
-        Me.btventas.TabIndex = 39
-        Me.btventas.UseVisualStyleBackColor = False
         '
         'Label1
         '
@@ -144,20 +109,6 @@ Partial Class frmcontenedor
         Me.Label1.Text = "Empleados"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
-        'btempleados
-        '
-        Me.btempleados.BackColor = System.Drawing.SystemColors.AppWorkspace
-        Me.btempleados.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.btempleados.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btempleados.FlatAppearance.BorderSize = 0
-        Me.btempleados.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.btempleados.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btempleados.Location = New System.Drawing.Point(15, 183)
-        Me.btempleados.Name = "btempleados"
-        Me.btempleados.Size = New System.Drawing.Size(50, 50)
-        Me.btempleados.TabIndex = 2
-        Me.btempleados.UseVisualStyleBackColor = False
-        '
         'Label3
         '
         Me.Label3.AutoSize = True
@@ -171,23 +122,9 @@ Partial Class frmcontenedor
         Me.Label3.Text = "Clientes"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
-        'btclientes
-        '
-        Me.btclientes.BackColor = System.Drawing.SystemColors.AppWorkspace
-        Me.btclientes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.btclientes.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btclientes.FlatAppearance.BorderSize = 0
-        Me.btclientes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.btclientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btclientes.Location = New System.Drawing.Point(15, 106)
-        Me.btclientes.Name = "btclientes"
-        Me.btclientes.Size = New System.Drawing.Size(50, 50)
-        Me.btclientes.TabIndex = 1
-        Me.btclientes.UseVisualStyleBackColor = False
-        '
         'pnlogin
         '
-        Me.pnlogin.BackColor = System.Drawing.Color.White
+        Me.pnlogin.BackColor = System.Drawing.Color.MediumSeaGreen
         Me.pnlogin.Controls.Add(Me.btsalir)
         Me.pnlogin.Controls.Add(Me.btingresar)
         Me.pnlogin.Controls.Add(Me.Label9)
@@ -271,12 +208,6 @@ Partial Class frmcontenedor
         Me.pnbotones2.Controls.Add(Me.btcerrar)
         Me.pnbotones2.Controls.Add(Me.Label6)
         Me.pnbotones2.Controls.Add(Me.btproductos)
-        Me.pnbotones2.Controls.Add(Me.Label8)
-        Me.pnbotones2.Controls.Add(Me.btservicios)
-        Me.pnbotones2.Controls.Add(Me.Label11)
-        Me.pnbotones2.Controls.Add(Me.btvendedor)
-        Me.pnbotones2.Controls.Add(Me.Label12)
-        Me.pnbotones2.Controls.Add(Me.btproveedor)
         Me.pnbotones2.Location = New System.Drawing.Point(1104, 0)
         Me.pnbotones2.Name = "pnbotones2"
         Me.pnbotones2.Size = New System.Drawing.Size(80, 621)
@@ -295,21 +226,6 @@ Partial Class frmcontenedor
         Me.Label7.Text = "Cerrar"
         Me.Label7.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
-        'btcerrar
-        '
-        Me.btcerrar.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.btcerrar.BackgroundImage = Global.SisGabinete.My.Resources.Resources.LeftArrow
-        Me.btcerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.btcerrar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btcerrar.FlatAppearance.BorderSize = 0
-        Me.btcerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.btcerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btcerrar.Location = New System.Drawing.Point(15, 529)
-        Me.btcerrar.Name = "btcerrar"
-        Me.btcerrar.Size = New System.Drawing.Size(50, 50)
-        Me.btcerrar.TabIndex = 45
-        Me.btcerrar.UseVisualStyleBackColor = False
-        '
         'Label6
         '
         Me.Label6.AutoSize = True
@@ -318,123 +234,10 @@ Partial Class frmcontenedor
         Me.Label6.ForeColor = System.Drawing.Color.White
         Me.Label6.Location = New System.Drawing.Point(6, 82)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(70, 17)
+        Me.Label6.Size = New System.Drawing.Size(64, 17)
         Me.Label6.TabIndex = 40
-        Me.Label6.Text = "Productos"
+        Me.Label6.Text = "Etiquetas"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.TopCenter
-        '
-        'btproductos
-        '
-        Me.btproductos.BackColor = System.Drawing.SystemColors.AppWorkspace
-        Me.btproductos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.btproductos.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btproductos.FlatAppearance.BorderSize = 0
-        Me.btproductos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.btproductos.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btproductos.Location = New System.Drawing.Point(15, 29)
-        Me.btproductos.Name = "btproductos"
-        Me.btproductos.Size = New System.Drawing.Size(50, 50)
-        Me.btproductos.TabIndex = 39
-        Me.btproductos.UseVisualStyleBackColor = False
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.BackColor = System.Drawing.Color.Transparent
-        Me.Label8.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.ForeColor = System.Drawing.Color.White
-        Me.Label8.Location = New System.Drawing.Point(11, 313)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(61, 17)
-        Me.Label8.TabIndex = 36
-        Me.Label8.Text = "Servicios"
-        Me.Label8.TextAlign = System.Drawing.ContentAlignment.TopCenter
-        '
-        'btservicios
-        '
-        Me.btservicios.BackColor = System.Drawing.SystemColors.AppWorkspace
-        Me.btservicios.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.btservicios.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btservicios.FlatAppearance.BorderSize = 0
-        Me.btservicios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.btservicios.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btservicios.Location = New System.Drawing.Point(15, 260)
-        Me.btservicios.Name = "btservicios"
-        Me.btservicios.Size = New System.Drawing.Size(50, 50)
-        Me.btservicios.TabIndex = 3
-        Me.btservicios.UseVisualStyleBackColor = False
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.BackColor = System.Drawing.Color.Transparent
-        Me.Label11.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.ForeColor = System.Drawing.Color.White
-        Me.Label11.Location = New System.Drawing.Point(1, 236)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(79, 17)
-        Me.Label11.TabIndex = 34
-        Me.Label11.Text = "Vendedores"
-        Me.Label11.TextAlign = System.Drawing.ContentAlignment.TopCenter
-        '
-        'btvendedor
-        '
-        Me.btvendedor.BackColor = System.Drawing.SystemColors.AppWorkspace
-        Me.btvendedor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.btvendedor.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btvendedor.FlatAppearance.BorderSize = 0
-        Me.btvendedor.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.btvendedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btvendedor.Location = New System.Drawing.Point(15, 183)
-        Me.btvendedor.Name = "btvendedor"
-        Me.btvendedor.Size = New System.Drawing.Size(50, 50)
-        Me.btvendedor.TabIndex = 2
-        Me.btvendedor.UseVisualStyleBackColor = False
-        '
-        'Label12
-        '
-        Me.Label12.AutoSize = True
-        Me.Label12.BackColor = System.Drawing.Color.Transparent
-        Me.Label12.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.ForeColor = System.Drawing.Color.White
-        Me.Label12.Location = New System.Drawing.Point(-1, 159)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(84, 17)
-        Me.Label12.TabIndex = 32
-        Me.Label12.Text = "Proveedores"
-        Me.Label12.TextAlign = System.Drawing.ContentAlignment.TopCenter
-        '
-        'btproveedor
-        '
-        Me.btproveedor.BackColor = System.Drawing.SystemColors.AppWorkspace
-        Me.btproveedor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.btproveedor.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btproveedor.FlatAppearance.BorderSize = 0
-        Me.btproveedor.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.btproveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btproveedor.Location = New System.Drawing.Point(15, 106)
-        Me.btproveedor.Name = "btproveedor"
-        Me.btproveedor.Size = New System.Drawing.Size(50, 50)
-        Me.btproveedor.TabIndex = 1
-        Me.btproveedor.UseVisualStyleBackColor = False
-        '
-        'pnpantallas
-        '
-        Me.pnpantallas.Controls.Add(Me.pblogo)
-        Me.pnpantallas.Location = New System.Drawing.Point(80, 0)
-        Me.pnpantallas.Name = "pnpantallas"
-        Me.pnpantallas.Size = New System.Drawing.Size(1024, 621)
-        Me.pnpantallas.TabIndex = 45
-        '
-        'pblogo
-        '
-        Me.pblogo.Image = Global.SisGabinete.My.Resources.Resources.Logo
-        Me.pblogo.Location = New System.Drawing.Point(398, 28)
-        Me.pblogo.Name = "pblogo"
-        Me.pblogo.Size = New System.Drawing.Size(201, 205)
-        Me.pblogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.pblogo.TabIndex = 44
-        Me.pblogo.TabStop = False
         '
         'btminimizar
         '
@@ -465,6 +268,118 @@ Partial Class frmcontenedor
         Me.btexit.Size = New System.Drawing.Size(15, 15)
         Me.btexit.TabIndex = 42
         Me.btexit.UseVisualStyleBackColor = False
+        '
+        'btconfiguracion
+        '
+        Me.btconfiguracion.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.btconfiguracion.BackgroundImage = Global.SisGabinete.My.Resources.Resources.Configuración
+        Me.btconfiguracion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btconfiguracion.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btconfiguracion.FlatAppearance.BorderSize = 0
+        Me.btconfiguracion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btconfiguracion.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btconfiguracion.Location = New System.Drawing.Point(15, 529)
+        Me.btconfiguracion.Name = "btconfiguracion"
+        Me.btconfiguracion.Size = New System.Drawing.Size(50, 50)
+        Me.btconfiguracion.TabIndex = 43
+        Me.btconfiguracion.UseVisualStyleBackColor = False
+        '
+        'btventas
+        '
+        Me.btventas.BackColor = System.Drawing.SystemColors.AppWorkspace
+        Me.btventas.BackgroundImage = Global.SisGabinete.My.Resources.Resources.ventas
+        Me.btventas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btventas.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btventas.FlatAppearance.BorderSize = 0
+        Me.btventas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btventas.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btventas.Location = New System.Drawing.Point(15, 29)
+        Me.btventas.Name = "btventas"
+        Me.btventas.Size = New System.Drawing.Size(50, 50)
+        Me.btventas.TabIndex = 39
+        Me.btventas.UseVisualStyleBackColor = False
+        '
+        'btempleados
+        '
+        Me.btempleados.BackColor = System.Drawing.SystemColors.AppWorkspace
+        Me.btempleados.BackgroundImage = Global.SisGabinete.My.Resources.Resources.empleados
+        Me.btempleados.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btempleados.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btempleados.FlatAppearance.BorderSize = 0
+        Me.btempleados.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btempleados.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btempleados.Location = New System.Drawing.Point(15, 183)
+        Me.btempleados.Name = "btempleados"
+        Me.btempleados.Size = New System.Drawing.Size(50, 50)
+        Me.btempleados.TabIndex = 2
+        Me.btempleados.UseVisualStyleBackColor = False
+        '
+        'btclientes
+        '
+        Me.btclientes.BackColor = System.Drawing.SystemColors.AppWorkspace
+        Me.btclientes.BackgroundImage = Global.SisGabinete.My.Resources.Resources.clientes
+        Me.btclientes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btclientes.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btclientes.FlatAppearance.BorderSize = 0
+        Me.btclientes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btclientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btclientes.Location = New System.Drawing.Point(15, 106)
+        Me.btclientes.Name = "btclientes"
+        Me.btclientes.Size = New System.Drawing.Size(50, 50)
+        Me.btclientes.TabIndex = 1
+        Me.btclientes.UseVisualStyleBackColor = False
+        '
+        'btcerrar
+        '
+        Me.btcerrar.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.btcerrar.BackgroundImage = Global.SisGabinete.My.Resources.Resources.LeftArrow
+        Me.btcerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btcerrar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btcerrar.FlatAppearance.BorderSize = 0
+        Me.btcerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btcerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btcerrar.Location = New System.Drawing.Point(15, 529)
+        Me.btcerrar.Name = "btcerrar"
+        Me.btcerrar.Size = New System.Drawing.Size(50, 50)
+        Me.btcerrar.TabIndex = 45
+        Me.btcerrar.UseVisualStyleBackColor = False
+        '
+        'btproductos
+        '
+        Me.btproductos.BackColor = System.Drawing.SystemColors.AppWorkspace
+        Me.btproductos.BackgroundImage = Global.SisGabinete.My.Resources.Resources.eiquetas
+        Me.btproductos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btproductos.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btproductos.FlatAppearance.BorderSize = 0
+        Me.btproductos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btproductos.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btproductos.Location = New System.Drawing.Point(15, 29)
+        Me.btproductos.Name = "btproductos"
+        Me.btproductos.Size = New System.Drawing.Size(50, 50)
+        Me.btproductos.TabIndex = 39
+        Me.btproductos.UseVisualStyleBackColor = False
+        '
+        'pnpantallas
+        '
+        Me.pnpantallas.BackgroundImage = Global.SisGabinete.My.Resources.Resources.back1
+        Me.pnpantallas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pnpantallas.Controls.Add(Me.pblogo)
+        Me.pnpantallas.Location = New System.Drawing.Point(80, 0)
+        Me.pnpantallas.Name = "pnpantallas"
+        Me.pnpantallas.Size = New System.Drawing.Size(1024, 621)
+        Me.pnpantallas.TabIndex = 45
+        '
+        'pblogo
+        '
+        Me.pblogo.BackColor = System.Drawing.Color.Transparent
+        Me.pblogo.BackgroundImage = Global.SisGabinete.My.Resources.Resources.Logo
+        Me.pblogo.Image = Global.SisGabinete.My.Resources.Resources.Logo
+        Me.pblogo.Location = New System.Drawing.Point(398, 28)
+        Me.pblogo.Name = "pblogo"
+        Me.pblogo.Size = New System.Drawing.Size(201, 205)
+        Me.pblogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.pblogo.TabIndex = 44
+        Me.pblogo.TabStop = False
         '
         'frmcontenedor
         '
@@ -510,12 +425,6 @@ Partial Class frmcontenedor
     Friend WithEvents pnbotones2 As Panel
     Friend WithEvents Label6 As Label
     Friend WithEvents btproductos As Button
-    Friend WithEvents Label8 As Label
-    Friend WithEvents btservicios As Button
-    Friend WithEvents Label11 As Label
-    Friend WithEvents btvendedor As Button
-    Friend WithEvents Label12 As Label
-    Friend WithEvents btproveedor As Button
     Friend WithEvents Label4 As Label
     Friend WithEvents btconfiguracion As Button
     Friend WithEvents btexit As Button

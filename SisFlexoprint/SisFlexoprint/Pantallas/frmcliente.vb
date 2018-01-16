@@ -323,4 +323,14 @@ Public Class frmcliente
         bloquearbtn()
         btnnuevo.Enabled = True
     End Sub
+
+    Private Sub ToolTip1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ToolTip1.SetToolTip(btnnuevo, "Nuevo")
+        ToolTip1.SetToolTip(btneditar, "Editar")
+        ToolTip1.SetToolTip(btnguardar, "Guardar")
+        ToolTip1.SetToolTip(btneliminar, "Eliminar")
+        ToolTip1.SetToolTip(btncancelar, "Cancelar")
+    End Sub
+
+
 End Class

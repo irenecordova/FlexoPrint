@@ -140,7 +140,7 @@ Public Class frmempleado
         limpiar()
         txtnombre.Text = dgvlistado.SelectedCells.Item(1).Value.ToString.ToString
         txtapellido.Text = dgvlistado.SelectedCells.Item(2).Value.ToString
-        txtcedula.Text = dgvlistado.SelectedCells.Item(7).Value.ToString
+        txtcedula.Text = dgvlistado.SelectedCells.Item(6).Value.ToString
         txtdireccion.Text = dgvlistado.SelectedCells.Item(3).Value.ToString
         txttelefono.Text = dgvlistado.SelectedCells.Item(4).Value.ToString
         txtemail.Text = dgvlistado.SelectedCells.Item(5).Value.ToString
@@ -192,15 +192,7 @@ Public Class frmempleado
         End If
     End Sub
 
-    Private Sub txtfecha_Validating(sender As Object, e As CancelEventArgs)
-        If DirectCast(sender, MaskedTextBox).Text <> "  /  /" Then
-            Me.erroricono.SetError(sender, "")
-        Else
-            Me.erroricono.SetError(sender, "Campo Obligatorio")
-        End If
-    End Sub
-
-    Private Sub btnnuevo_Click(sender As Object, e As EventArgs) Handles btnnuevo.Click
+    Private Sub btnnuevo_Click(sender As Object, e As EventArgs)
         limpiar()
         desbloqueartext()
         save_edit = 1
@@ -209,7 +201,7 @@ Public Class frmempleado
         btneliminar.Enabled = False
     End Sub
 
-    Private Sub btneditar_Click(sender As Object, e As EventArgs) Handles btneditar.Click
+    Private Sub btneditar_Click(sender As Object, e As EventArgs)
         desbloqueartext()
         save_edit = 0
         desbloquearbtn()
@@ -217,7 +209,7 @@ Public Class frmempleado
         btneliminar.Enabled = False
     End Sub
 
-    Private Sub btnguardar_Click(sender As Object, e As EventArgs) Handles btnguardar.Click
+    Private Sub btnguardar_Click(sender As Object, e As EventArgs)
         If save_edit = 1 Then
             If Me.ValidateChildren = True And txtnombre.Text <> "" And txtapellido.Text <> "" And txtdireccion.Text <> "" And txttelefono.Text <> "" And txtcedula.Text <> "" Then
                 Try
@@ -267,7 +259,7 @@ Public Class frmempleado
                         dts.gtelefono = txttelefono.Text
                         dts.gemail = txtemail.Text
                         dts.gcedula = txtcedula.Text
-                        dts.gtipo = dgvlistado.SelectedCells.Item(8).Value.ToString
+                        dts.gtipo = dgvlistado.SelectedCells.Item(7).Value.ToString
 
 
                         If func.editar(dts) Then
@@ -290,7 +282,7 @@ Public Class frmempleado
         End If
     End Sub
 
-    Private Sub btneliminar_Click(sender As Object, e As EventArgs) Handles btneliminar.Click
+    Private Sub btneliminar_Click(sender As Object, e As EventArgs)
         Dim result As DialogResult
 
         result = MessageBox.Show("¿Desea eliminar los datos?", "Modificando Datos", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
@@ -337,9 +329,23 @@ Public Class frmempleado
         End If
     End Sub
 
-    Private Sub btncancelar_Click(sender As Object, e As EventArgs) Handles btncancelar.Click
+    Private Sub btncancelar_Click(sender As Object, e As EventArgs)
         bloqueartext()
         bloquearbtn()
         btnnuevo.Enabled = True
+    End Sub
+
+    Private Sub btnnuevo_Click(sender As Object, e As EventArgs)
+        limpiar()
+        desbloqueartext()
+        save_edit = 1
+        desbloquearbtn()
+        btneditar.Enabled = False
+        btneliminar.Enabled = False
+
+    End Sub
+
+    Private Sub btnnuevo_Click_1(sender As Object, e As EventArgs) Handles btnnuevo.Click
+
     End Sub
 End Class

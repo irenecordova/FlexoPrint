@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frmempleado
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class frmempleado
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -38,14 +38,13 @@ Partial Class frmempleado
         Me.dgvlistado = New System.Windows.Forms.DataGridView()
         Me.txtbuscar = New System.Windows.Forms.TextBox()
         Me.pandatosprin = New System.Windows.Forms.Panel()
-        Me.btncancelar = New System.Windows.Forms.Button()
-        Me.btnguardar = New System.Windows.Forms.Button()
-        Me.btneditar = New System.Windows.Forms.Button()
-        Me.btneliminar = New System.Windows.Forms.Button()
-        Me.btnnuevo = New System.Windows.Forms.Button()
         Me.erroricono = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.txtbandera = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
+        Me.btnnuevo = New System.Windows.Forms.Button()
+        Me.btneditar = New System.Windows.Forms.Button()
+        Me.btncancelar = New System.Windows.Forms.Button()
+        Me.btnguardar = New System.Windows.Forms.Button()
         Me.pandatossec.SuspendLayout()
         CType(Me.dgvlistado, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pandatosprin.SuspendLayout()
@@ -190,7 +189,7 @@ Partial Class frmempleado
         Me.dgvlistado.AllowUserToDeleteRows = False
         Me.dgvlistado.AllowUserToResizeColumns = False
         Me.dgvlistado.AllowUserToResizeRows = False
-        Me.dgvlistado.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(72, Byte), Integer), CType(CType(90, Byte), Integer))
+        Me.dgvlistado.BackgroundColor = System.Drawing.Color.MediumSeaGreen
         Me.dgvlistado.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgvlistado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvlistado.Location = New System.Drawing.Point(60, 91)
@@ -228,51 +227,6 @@ Partial Class frmempleado
         Me.pandatosprin.Size = New System.Drawing.Size(463, 132)
         Me.pandatosprin.TabIndex = 6
         '
-        'btncancelar
-        '
-        Me.btncancelar.Location = New System.Drawing.Point(860, 524)
-        Me.btncancelar.Name = "btncancelar"
-        Me.btncancelar.Size = New System.Drawing.Size(104, 37)
-        Me.btncancelar.TabIndex = 13
-        Me.btncancelar.Text = "Cancelar"
-        Me.btncancelar.UseVisualStyleBackColor = True
-        '
-        'btnguardar
-        '
-        Me.btnguardar.Location = New System.Drawing.Point(741, 524)
-        Me.btnguardar.Name = "btnguardar"
-        Me.btnguardar.Size = New System.Drawing.Size(104, 37)
-        Me.btnguardar.TabIndex = 12
-        Me.btnguardar.Text = "Guardar"
-        Me.btnguardar.UseVisualStyleBackColor = True
-        '
-        'btneditar
-        '
-        Me.btneditar.Location = New System.Drawing.Point(621, 524)
-        Me.btneditar.Name = "btneditar"
-        Me.btneditar.Size = New System.Drawing.Size(104, 37)
-        Me.btneditar.TabIndex = 11
-        Me.btneditar.Text = "Editar"
-        Me.btneditar.UseVisualStyleBackColor = True
-        '
-        'btneliminar
-        '
-        Me.btneliminar.Location = New System.Drawing.Point(860, 481)
-        Me.btneliminar.Name = "btneliminar"
-        Me.btneliminar.Size = New System.Drawing.Size(104, 37)
-        Me.btneliminar.TabIndex = 14
-        Me.btneliminar.Text = "Eliminar"
-        Me.btneliminar.UseVisualStyleBackColor = True
-        '
-        'btnnuevo
-        '
-        Me.btnnuevo.Location = New System.Drawing.Point(501, 524)
-        Me.btnnuevo.Name = "btnnuevo"
-        Me.btnnuevo.Size = New System.Drawing.Size(104, 37)
-        Me.btnnuevo.TabIndex = 10
-        Me.btnnuevo.Text = "Nuevo"
-        Me.btnnuevo.UseVisualStyleBackColor = True
-        '
         'erroricono
         '
         Me.erroricono.ContainerControl = Me
@@ -289,25 +243,81 @@ Partial Class frmempleado
         'Label6
         '
         Me.Label6.AutoSize = True
+        Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.Font = New System.Drawing.Font("Segoe UI Semibold", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.MediumSeaGreen
         Me.Label6.Location = New System.Drawing.Point(52, 9)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(178, 47)
         Me.Label6.TabIndex = 17
         Me.Label6.Text = "Empleado"
         '
+        'btnnuevo
+        '
+        Me.btnnuevo.BackColor = System.Drawing.Color.Transparent
+        Me.btnnuevo.BackgroundImage = Global.SisGabinete.My.Resources.Resources.nuevo
+        Me.btnnuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.btnnuevo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnnuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnnuevo.Location = New System.Drawing.Point(555, 422)
+        Me.btnnuevo.Name = "btnnuevo"
+        Me.btnnuevo.Size = New System.Drawing.Size(66, 66)
+        Me.btnnuevo.TabIndex = 18
+        Me.btnnuevo.UseVisualStyleBackColor = False
+        '
+        'btneditar
+        '
+        Me.btneditar.BackColor = System.Drawing.Color.Transparent
+        Me.btneditar.BackgroundImage = Global.SisGabinete.My.Resources.Resources.editar
+        Me.btneditar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.btneditar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btneditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btneditar.Location = New System.Drawing.Point(715, 434)
+        Me.btneditar.Name = "btneditar"
+        Me.btneditar.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.btneditar.Size = New System.Drawing.Size(66, 66)
+        Me.btneditar.TabIndex = 19
+        Me.btneditar.UseVisualStyleBackColor = False
+        '
+        'btncancelar
+        '
+        Me.btncancelar.BackColor = System.Drawing.Color.Transparent
+        Me.btncancelar.BackgroundImage = Global.SisGabinete.My.Resources.Resources.cancelar
+        Me.btncancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.btncancelar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btncancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btncancelar.Location = New System.Drawing.Point(856, 434)
+        Me.btncancelar.Name = "btncancelar"
+        Me.btncancelar.Size = New System.Drawing.Size(66, 66)
+        Me.btncancelar.TabIndex = 20
+        Me.btncancelar.UseVisualStyleBackColor = False
+        '
+        'btnguardar
+        '
+        Me.btnguardar.BackColor = System.Drawing.Color.Transparent
+        Me.btnguardar.BackgroundImage = Global.SisGabinete.My.Resources.Resources.guardar
+        Me.btnguardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.btnguardar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnguardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnguardar.Location = New System.Drawing.Point(478, 410)
+        Me.btnguardar.Name = "btnguardar"
+        Me.btnguardar.Size = New System.Drawing.Size(66, 66)
+        Me.btnguardar.TabIndex = 21
+        Me.btnguardar.UseVisualStyleBackColor = False
+        '
         'frmempleado
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = Global.SisGabinete.My.Resources.Resources.back1
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1024, 621)
+        Me.Controls.Add(Me.btnguardar)
+        Me.Controls.Add(Me.btncancelar)
+        Me.Controls.Add(Me.btneditar)
+        Me.Controls.Add(Me.btnnuevo)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.txtbandera)
-        Me.Controls.Add(Me.btncancelar)
-        Me.Controls.Add(Me.btnguardar)
-        Me.Controls.Add(Me.btneditar)
-        Me.Controls.Add(Me.btneliminar)
-        Me.Controls.Add(Me.btnnuevo)
         Me.Controls.Add(Me.pandatossec)
         Me.Controls.Add(Me.dgvlistado)
         Me.Controls.Add(Me.txtbuscar)
@@ -341,12 +351,11 @@ Partial Class frmempleado
     Friend WithEvents dgvlistado As DataGridView
     Friend WithEvents txtbuscar As TextBox
     Friend WithEvents pandatosprin As Panel
-    Friend WithEvents btncancelar As Button
-    Friend WithEvents btnguardar As Button
-    Friend WithEvents btneditar As Button
-    Friend WithEvents btneliminar As Button
-    Friend WithEvents btnnuevo As Button
     Friend WithEvents erroricono As ErrorProvider
     Friend WithEvents txtbandera As TextBox
     Friend WithEvents Label6 As Label
+    Friend WithEvents btneditar As Button
+    Friend WithEvents btnnuevo As Button
+    Friend WithEvents btncancelar As Button
+    Friend WithEvents btnguardar As Button
 End Class

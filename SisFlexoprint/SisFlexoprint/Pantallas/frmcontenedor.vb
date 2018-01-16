@@ -6,13 +6,6 @@
         Label4.Visible = False
 
         btproductos.Visible = False
-        btproveedor.Visible = False
-        btvendedor.Visible = False
-        btservicios.Visible = False
-        Label6.Visible = False
-        Label8.Visible = False
-        Label11.Visible = False
-        Label12.Visible = False
 
         frmempleado.btnnuevo.Visible = False
         frmempleado.btnguardar.Visible = False
@@ -26,13 +19,7 @@
         Label4.Visible = True
 
         btproductos.Visible = True
-        btproveedor.Visible = True
-        btvendedor.Visible = True
-        btservicios.Visible = True
         Label6.Visible = True
-        Label8.Visible = True
-        Label11.Visible = True
-        Label12.Visible = True
 
         frmempleado.btnnuevo.Visible = True
         frmempleado.btnguardar.Visible = True
@@ -42,9 +29,19 @@
     End Function
 
     Private Sub frmcontenedor_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        pnpantallas.Visible = False
-        pnbotones.Visible = False
-        pnbotones2.Visible = False
+        pnpantallas.Visible = True
+        pnbotones.Visible = True
+        pnbotones2.Visible = True
+        btclientes.Visible = False
+        btempleados.Visible = False
+        btventas.Visible = False
+        btproductos.Visible = False
+        pblogo.Visible = True
+        Label3.Visible = False
+        Label5.Visible = False
+        Label1.Visible = False
+        Label6.Visible = False
+
     End Sub
 
     Private Sub btclientes_Click(sender As Object, e As EventArgs) Handles btclientes.Click
@@ -78,12 +75,17 @@
                 pnbotones.Visible = True
                 pnlogin.Visible = False
                 pnbotones2.Visible = True
-                pblogo.Visible = False
+                pblogo.Visible = True
+                Label3.Visible = True
+                Label5.Visible = True
+                Label1.Visible = True
+                Label6.Visible = True
+                btclientes.Visible = True
+                btempleados.Visible = True
+                btventas.Visible = True
+                btproductos.Visible = True
+
                 pnpantallas.Controls.Clear()
-                frmventas.TopLevel = False
-                frmventas.Visible = True
-                pnpantallas.Controls.Add(frmventas)
-                frmventas.Show()
                 administrador()
             Else
                 MsgBox("Credencial incorrecta", MsgBoxStyle.Information, "Acceso denegado al sistema")
@@ -137,7 +139,7 @@
         frmproducto.Show()
     End Sub
 
-    Private Sub btservicios_Click(sender As Object, e As EventArgs) Handles btservicios.Click
+    Private Sub btservicios_Click(sender As Object, e As EventArgs)
         pnpantallas.Controls.Clear()
         frmservicio.TopLevel = False
         frmservicio.Visible = True
@@ -163,12 +165,23 @@
     End Sub
 
     Private Sub btcerrar_Click(sender As Object, e As EventArgs) Handles btcerrar.Click
-        pnpantallas.Visible = False
-        pnbotones.Visible = False
-        pnbotones2.Visible = False
+        pnpantallas.Visible = True
         pnlogin.Visible = True
         pblogo.Visible = True
+        pnbotones.Visible = True
+        pnbotones2.Visible = True
+        btclientes.Visible = False
+        btempleados.Visible = False
+        btventas.Visible = False
+        btproductos.Visible = False
+        pblogo.Visible = True
+        Label3.Visible = False
+        Label5.Visible = False
+        Label1.Visible = False
+        Label6.Visible = False
     End Sub
 
+    Private Sub pnbotones2_Paint(sender As Object, e As PaintEventArgs) Handles pnbotones2.Paint
 
+    End Sub
 End Class

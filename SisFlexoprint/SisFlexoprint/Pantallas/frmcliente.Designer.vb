@@ -40,18 +40,21 @@ Partial Class frmcliente
         Me.txtdireccion = New System.Windows.Forms.TextBox()
         Me.txtcedula = New System.Windows.Forms.TextBox()
         Me.erroricono = New System.Windows.Forms.ErrorProvider(Me.components)
-        Me.btnnuevo = New System.Windows.Forms.Button()
-        Me.btneliminar = New System.Windows.Forms.Button()
-        Me.btneditar = New System.Windows.Forms.Button()
-        Me.btncancelar = New System.Windows.Forms.Button()
-        Me.btnguardar = New System.Windows.Forms.Button()
         Me.txtbandera = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.btncancelar = New System.Windows.Forms.Button()
+        Me.btnguardar = New System.Windows.Forms.Button()
+        Me.btneditar = New System.Windows.Forms.Button()
+        Me.btneliminar = New System.Windows.Forms.Button()
+        Me.btnnuevo = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         CType(Me.dgvlistado, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pandatosprin.SuspendLayout()
         CType(Me.piccliente, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pandatossec.SuspendLayout()
         CType(Me.erroricono, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'dgvlistado
@@ -60,7 +63,7 @@ Partial Class frmcliente
         Me.dgvlistado.AllowUserToDeleteRows = False
         Me.dgvlistado.AllowUserToResizeColumns = False
         Me.dgvlistado.AllowUserToResizeRows = False
-        Me.dgvlistado.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(72, Byte), Integer), CType(CType(90, Byte), Integer))
+        Me.dgvlistado.BackgroundColor = System.Drawing.Color.MediumSeaGreen
         Me.dgvlistado.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgvlistado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvlistado.Location = New System.Drawing.Point(60, 91)
@@ -243,51 +246,6 @@ Partial Class frmcliente
         '
         Me.erroricono.ContainerControl = Me
         '
-        'btnnuevo
-        '
-        Me.btnnuevo.Location = New System.Drawing.Point(501, 524)
-        Me.btnnuevo.Name = "btnnuevo"
-        Me.btnnuevo.Size = New System.Drawing.Size(104, 37)
-        Me.btnnuevo.TabIndex = 8
-        Me.btnnuevo.Text = "Nuevo"
-        Me.btnnuevo.UseVisualStyleBackColor = True
-        '
-        'btneliminar
-        '
-        Me.btneliminar.Location = New System.Drawing.Point(860, 481)
-        Me.btneliminar.Name = "btneliminar"
-        Me.btneliminar.Size = New System.Drawing.Size(104, 37)
-        Me.btneliminar.TabIndex = 12
-        Me.btneliminar.Text = "Eliminar"
-        Me.btneliminar.UseVisualStyleBackColor = True
-        '
-        'btneditar
-        '
-        Me.btneditar.Location = New System.Drawing.Point(621, 524)
-        Me.btneditar.Name = "btneditar"
-        Me.btneditar.Size = New System.Drawing.Size(104, 37)
-        Me.btneditar.TabIndex = 9
-        Me.btneditar.Text = "Editar"
-        Me.btneditar.UseVisualStyleBackColor = True
-        '
-        'btncancelar
-        '
-        Me.btncancelar.Location = New System.Drawing.Point(860, 524)
-        Me.btncancelar.Name = "btncancelar"
-        Me.btncancelar.Size = New System.Drawing.Size(104, 37)
-        Me.btncancelar.TabIndex = 11
-        Me.btncancelar.Text = "Cancelar"
-        Me.btncancelar.UseVisualStyleBackColor = True
-        '
-        'btnguardar
-        '
-        Me.btnguardar.Location = New System.Drawing.Point(741, 524)
-        Me.btnguardar.Name = "btnguardar"
-        Me.btnguardar.Size = New System.Drawing.Size(104, 37)
-        Me.btnguardar.TabIndex = 10
-        Me.btnguardar.Text = "Guardar"
-        Me.btnguardar.UseVisualStyleBackColor = True
-        '
         'txtbandera
         '
         Me.txtbandera.Location = New System.Drawing.Point(501, 12)
@@ -300,19 +258,118 @@ Partial Class frmcliente
         'Label5
         '
         Me.Label5.AutoSize = True
+        Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Segoe UI Semibold", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.MediumSeaGreen
         Me.Label5.Location = New System.Drawing.Point(52, 9)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(131, 47)
         Me.Label5.TabIndex = 16
         Me.Label5.Text = "Cliente"
         '
+        'btncancelar
+        '
+        Me.btncancelar.BackColor = System.Drawing.Color.Transparent
+        Me.btncancelar.BackgroundImage = Global.SisGabinete.My.Resources.Resources.cancelar
+        Me.btncancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.btncancelar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btncancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray
+        Me.btncancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray
+        Me.btncancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btncancelar.ForeColor = System.Drawing.Color.Gainsboro
+        Me.btncancelar.Location = New System.Drawing.Point(889, 471)
+        Me.btncancelar.Name = "btncancelar"
+        Me.btncancelar.Size = New System.Drawing.Size(66, 66)
+        Me.btncancelar.TabIndex = 11
+        Me.btncancelar.UseVisualStyleBackColor = False
+        '
+        'btnguardar
+        '
+        Me.btnguardar.BackColor = System.Drawing.Color.Transparent
+        Me.btnguardar.BackgroundImage = Global.SisGabinete.My.Resources.Resources.guardar
+        Me.btnguardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.btnguardar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnguardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray
+        Me.btnguardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray
+        Me.btnguardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnguardar.ForeColor = System.Drawing.Color.Gainsboro
+        Me.btnguardar.Location = New System.Drawing.Point(704, 470)
+        Me.btnguardar.Name = "btnguardar"
+        Me.btnguardar.Size = New System.Drawing.Size(66, 66)
+        Me.btnguardar.TabIndex = 10
+        Me.btnguardar.UseVisualStyleBackColor = False
+        '
+        'btneditar
+        '
+        Me.btneditar.BackColor = System.Drawing.Color.Transparent
+        Me.btneditar.BackgroundImage = Global.SisGabinete.My.Resources.Resources.editar
+        Me.btneditar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.btneditar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btneditar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray
+        Me.btneditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray
+        Me.btneditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btneditar.ForeColor = System.Drawing.Color.Transparent
+        Me.btneditar.Location = New System.Drawing.Point(605, 471)
+        Me.btneditar.Name = "btneditar"
+        Me.btneditar.Size = New System.Drawing.Size(66, 66)
+        Me.btneditar.TabIndex = 9
+        Me.btneditar.UseVisualStyleBackColor = False
+        '
+        'btneliminar
+        '
+        Me.btneliminar.BackColor = System.Drawing.Color.Transparent
+        Me.btneliminar.BackgroundImage = Global.SisGabinete.My.Resources.Resources.eliminar
+        Me.btneliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.btneliminar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btneliminar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray
+        Me.btneliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray
+        Me.btneliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btneliminar.ForeColor = System.Drawing.Color.Gainsboro
+        Me.btneliminar.Location = New System.Drawing.Point(801, 473)
+        Me.btneliminar.Name = "btneliminar"
+        Me.btneliminar.Size = New System.Drawing.Size(66, 66)
+        Me.btneliminar.TabIndex = 12
+        Me.btneliminar.UseVisualStyleBackColor = False
+        '
+        'btnnuevo
+        '
+        Me.btnnuevo.BackColor = System.Drawing.Color.Transparent
+        Me.btnnuevo.BackgroundImage = Global.SisGabinete.My.Resources.Resources.nuevo
+        Me.btnnuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.btnnuevo.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.btnnuevo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnnuevo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray
+        Me.btnnuevo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray
+        Me.btnnuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnnuevo.ForeColor = System.Drawing.Color.Transparent
+        Me.btnnuevo.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.btnnuevo.Location = New System.Drawing.Point(510, 470)
+        Me.btnnuevo.Name = "btnnuevo"
+        Me.btnnuevo.Size = New System.Drawing.Size(66, 66)
+        Me.btnnuevo.TabIndex = 8
+        Me.btnnuevo.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.btnnuevo.UseVisualStyleBackColor = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox1.BackgroundImage = Global.SisGabinete.My.Resources.Resources.busqueda
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox1.Location = New System.Drawing.Point(58, 56)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(30, 30)
+        Me.PictureBox1.TabIndex = 19
+        Me.PictureBox1.TabStop = False
+        '
         'frmcliente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(247, Byte), Integer))
+        Me.BackColor = System.Drawing.Color.Gainsboro
+        Me.BackgroundImage = Global.SisGabinete.My.Resources.Resources.back1
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1024, 621)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.txtbandera)
         Me.Controls.Add(Me.btncancelar)
@@ -324,6 +381,7 @@ Partial Class frmcliente
         Me.Controls.Add(Me.pandatosprin)
         Me.Controls.Add(Me.txtbuscar)
         Me.Controls.Add(Me.dgvlistado)
+        Me.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmcliente"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -335,6 +393,7 @@ Partial Class frmcliente
         Me.pandatossec.ResumeLayout(False)
         Me.pandatossec.PerformLayout()
         CType(Me.erroricono, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -363,4 +422,6 @@ Partial Class frmcliente
     Friend WithEvents btnnuevo As Button
     Friend WithEvents txtbandera As TextBox
     Friend WithEvents Label5 As Label
+    Friend WithEvents ToolTip1 As ToolTip
+    Friend WithEvents PictureBox1 As PictureBox
 End Class
