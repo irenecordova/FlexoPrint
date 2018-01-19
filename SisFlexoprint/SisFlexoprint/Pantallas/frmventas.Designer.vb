@@ -22,11 +22,10 @@ Partial Class frmventas
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.pandatossec = New System.Windows.Forms.Panel()
-        Me.btagregars = New System.Windows.Forms.Button()
+        Me.btagregare = New System.Windows.Forms.Button()
         Me.txtprecios = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.btbuscars = New System.Windows.Forms.Button()
@@ -36,10 +35,8 @@ Partial Class frmventas
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.txtservicio = New System.Windows.Forms.TextBox()
+        Me.txtetiqueta = New System.Windows.Forms.TextBox()
         Me.pandatosprin = New System.Windows.Forms.Panel()
-        Me.txthora = New System.Windows.Forms.MaskedTextBox()
-        Me.Label9 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.dtpfecha = New System.Windows.Forms.DateTimePicker()
         Me.checkgenerico = New System.Windows.Forms.CheckBox()
@@ -52,16 +49,12 @@ Partial Class frmventas
         Me.dgvlistado = New System.Windows.Forms.DataGridView()
         Me.txtidcliente = New System.Windows.Forms.TextBox()
         Me.txtidempleado = New System.Windows.Forms.TextBox()
-        Me.txtidservicio = New System.Windows.Forms.TextBox()
+        Me.txtidetiqueta = New System.Windows.Forms.TextBox()
         Me.dgvservicios = New System.Windows.Forms.DataGridView()
-        Me.txtidproducto = New System.Windows.Forms.TextBox()
-        Me.dgvproductos = New System.Windows.Forms.DataGridView()
         Me.txtidventa = New System.Windows.Forms.TextBox()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.btncancelar = New System.Windows.Forms.Button()
         Me.btnguardar = New System.Windows.Forms.Button()
-        Me.btneditar = New System.Windows.Forms.Button()
-        Me.btneliminar = New System.Windows.Forms.Button()
         Me.btnnuevo = New System.Windows.Forms.Button()
         Me.pandatossec.SuspendLayout()
         CType(Me.txtcantidads, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -69,13 +62,12 @@ Partial Class frmventas
         CType(Me.piccliente, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvlistado, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvservicios, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.dgvproductos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'pandatossec
         '
         Me.pandatossec.BackColor = System.Drawing.Color.White
-        Me.pandatossec.Controls.Add(Me.btagregars)
+        Me.pandatossec.Controls.Add(Me.btagregare)
         Me.pandatossec.Controls.Add(Me.txtprecios)
         Me.pandatossec.Controls.Add(Me.Label10)
         Me.pandatossec.Controls.Add(Me.btbuscars)
@@ -85,21 +77,21 @@ Partial Class frmventas
         Me.pandatossec.Controls.Add(Me.Label3)
         Me.pandatossec.Controls.Add(Me.Label2)
         Me.pandatossec.Controls.Add(Me.Label1)
-        Me.pandatossec.Controls.Add(Me.txtservicio)
+        Me.pandatossec.Controls.Add(Me.txtetiqueta)
         Me.pandatossec.Location = New System.Drawing.Point(583, 60)
         Me.pandatossec.Name = "pandatossec"
         Me.pandatossec.Size = New System.Drawing.Size(381, 127)
         Me.pandatossec.TabIndex = 18
         '
-        'btagregars
+        'btagregare
         '
-        Me.btagregars.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btagregars.Location = New System.Drawing.Point(308, 82)
-        Me.btagregars.Name = "btagregars"
-        Me.btagregars.Size = New System.Drawing.Size(54, 25)
-        Me.btagregars.TabIndex = 20
-        Me.btagregars.Text = "Add"
-        Me.btagregars.UseVisualStyleBackColor = True
+        Me.btagregare.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btagregare.Location = New System.Drawing.Point(308, 82)
+        Me.btagregare.Name = "btagregare"
+        Me.btagregare.Size = New System.Drawing.Size(54, 25)
+        Me.btagregare.TabIndex = 20
+        Me.btagregare.Text = "Add"
+        Me.btagregare.UseVisualStyleBackColor = True
         '
         'txtprecios
         '
@@ -198,22 +190,20 @@ Partial Class frmventas
         Me.Label1.TabIndex = 7
         Me.Label1.Text = "Empleado"
         '
-        'txtservicio
+        'txtetiqueta
         '
-        Me.txtservicio.BackColor = System.Drawing.Color.White
-        Me.txtservicio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtservicio.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtservicio.ForeColor = System.Drawing.Color.Black
-        Me.txtservicio.Location = New System.Drawing.Point(91, 51)
-        Me.txtservicio.Name = "txtservicio"
-        Me.txtservicio.Size = New System.Drawing.Size(240, 25)
-        Me.txtservicio.TabIndex = 5
+        Me.txtetiqueta.BackColor = System.Drawing.Color.White
+        Me.txtetiqueta.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtetiqueta.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtetiqueta.ForeColor = System.Drawing.Color.Black
+        Me.txtetiqueta.Location = New System.Drawing.Point(91, 51)
+        Me.txtetiqueta.Name = "txtetiqueta"
+        Me.txtetiqueta.Size = New System.Drawing.Size(240, 25)
+        Me.txtetiqueta.TabIndex = 5
         '
         'pandatosprin
         '
         Me.pandatosprin.BackColor = System.Drawing.Color.White
-        Me.pandatosprin.Controls.Add(Me.txthora)
-        Me.pandatosprin.Controls.Add(Me.Label9)
         Me.pandatosprin.Controls.Add(Me.Label8)
         Me.pandatosprin.Controls.Add(Me.dtpfecha)
         Me.pandatosprin.Controls.Add(Me.checkgenerico)
@@ -226,28 +216,6 @@ Partial Class frmventas
         Me.pandatosprin.Name = "pandatosprin"
         Me.pandatosprin.Size = New System.Drawing.Size(463, 144)
         Me.pandatosprin.TabIndex = 17
-        '
-        'txthora
-        '
-        Me.txthora.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txthora.Location = New System.Drawing.Point(279, 99)
-        Me.txthora.Mask = "00:00:00"
-        Me.txthora.Name = "txthora"
-        Me.txthora.Size = New System.Drawing.Size(164, 25)
-        Me.txthora.TabIndex = 14
-        Me.txthora.Visible = False
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.Label9.Location = New System.Drawing.Point(235, 102)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(38, 17)
-        Me.Label9.TabIndex = 13
-        Me.Label9.Text = "Hora"
-        Me.Label9.Visible = False
         '
         'Label8
         '
@@ -357,12 +325,12 @@ Partial Class frmventas
         Me.dgvlistado.Name = "dgvlistado"
         Me.dgvlistado.ReadOnly = True
         Me.dgvlistado.RowHeadersVisible = False
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(72, Byte), Integer), CType(CType(90, Byte), Integer))
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(55, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(73, Byte), Integer))
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        Me.dgvlistado.RowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(72, Byte), Integer), CType(CType(90, Byte), Integer))
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(55, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(73, Byte), Integer))
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        Me.dgvlistado.RowsDefaultCellStyle = DataGridViewCellStyle3
         Me.dgvlistado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvlistado.Size = New System.Drawing.Size(463, 296)
         Me.dgvlistado.TabIndex = 1
@@ -383,13 +351,13 @@ Partial Class frmventas
         Me.txtidempleado.TabIndex = 25
         Me.txtidempleado.Visible = False
         '
-        'txtidservicio
+        'txtidetiqueta
         '
-        Me.txtidservicio.Location = New System.Drawing.Point(758, 34)
-        Me.txtidservicio.Name = "txtidservicio"
-        Me.txtidservicio.Size = New System.Drawing.Size(100, 20)
-        Me.txtidservicio.TabIndex = 26
-        Me.txtidservicio.Visible = False
+        Me.txtidetiqueta.Location = New System.Drawing.Point(758, 34)
+        Me.txtidetiqueta.Name = "txtidetiqueta"
+        Me.txtidetiqueta.Size = New System.Drawing.Size(100, 20)
+        Me.txtidetiqueta.TabIndex = 26
+        Me.txtidetiqueta.Visible = False
         '
         'dgvservicios
         '
@@ -400,50 +368,19 @@ Partial Class frmventas
         Me.dgvservicios.BackgroundColor = System.Drawing.Color.MediumSeaGreen
         Me.dgvservicios.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgvservicios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvservicios.Location = New System.Drawing.Point(583, 247)
+        Me.dgvservicios.Location = New System.Drawing.Point(583, 265)
         Me.dgvservicios.Name = "dgvservicios"
         Me.dgvservicios.ReadOnly = True
         Me.dgvservicios.RowHeadersVisible = False
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(72, Byte), Integer), CType(CType(90, Byte), Integer))
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(55, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(73, Byte), Integer))
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        Me.dgvservicios.RowsDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(72, Byte), Integer), CType(CType(90, Byte), Integer))
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(55, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(73, Byte), Integer))
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        Me.dgvservicios.RowsDefaultCellStyle = DataGridViewCellStyle4
         Me.dgvservicios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvservicios.Size = New System.Drawing.Size(381, 106)
+        Me.dgvservicios.Size = New System.Drawing.Size(381, 159)
         Me.dgvservicios.TabIndex = 29
-        '
-        'txtidproducto
-        '
-        Me.txtidproducto.Location = New System.Drawing.Point(864, 34)
-        Me.txtidproducto.Name = "txtidproducto"
-        Me.txtidproducto.Size = New System.Drawing.Size(100, 20)
-        Me.txtidproducto.TabIndex = 30
-        Me.txtidproducto.Visible = False
-        '
-        'dgvproductos
-        '
-        Me.dgvproductos.AllowUserToAddRows = False
-        Me.dgvproductos.AllowUserToDeleteRows = False
-        Me.dgvproductos.AllowUserToResizeColumns = False
-        Me.dgvproductos.AllowUserToResizeRows = False
-        Me.dgvproductos.BackgroundColor = System.Drawing.Color.MediumSeaGreen
-        Me.dgvproductos.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.dgvproductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvproductos.Location = New System.Drawing.Point(583, 359)
-        Me.dgvproductos.Name = "dgvproductos"
-        Me.dgvproductos.ReadOnly = True
-        Me.dgvproductos.RowHeadersVisible = False
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(72, Byte), Integer), CType(CType(90, Byte), Integer))
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(55, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(73, Byte), Integer))
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        Me.dgvproductos.RowsDefaultCellStyle = DataGridViewCellStyle3
-        Me.dgvproductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvproductos.Size = New System.Drawing.Size(381, 106)
-        Me.dgvproductos.TabIndex = 31
         '
         'txtidventa
         '
@@ -475,7 +412,7 @@ Partial Class frmventas
         Me.btncancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray
         Me.btncancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btncancelar.ForeColor = System.Drawing.Color.Gainsboro
-        Me.btncancelar.Location = New System.Drawing.Point(940, 476)
+        Me.btncancelar.Location = New System.Drawing.Point(834, 476)
         Me.btncancelar.Name = "btncancelar"
         Me.btncancelar.Size = New System.Drawing.Size(66, 66)
         Me.btncancelar.TabIndex = 41
@@ -497,38 +434,6 @@ Partial Class frmventas
         Me.btnguardar.TabIndex = 40
         Me.btnguardar.UseVisualStyleBackColor = False
         '
-        'btneditar
-        '
-        Me.btneditar.BackColor = System.Drawing.Color.Transparent
-        Me.btneditar.BackgroundImage = Global.SisGabinete.My.Resources.Resources.editar
-        Me.btneditar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.btneditar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btneditar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray
-        Me.btneditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray
-        Me.btneditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btneditar.ForeColor = System.Drawing.Color.Transparent
-        Me.btneditar.Location = New System.Drawing.Point(640, 476)
-        Me.btneditar.Name = "btneditar"
-        Me.btneditar.Size = New System.Drawing.Size(66, 66)
-        Me.btneditar.TabIndex = 39
-        Me.btneditar.UseVisualStyleBackColor = False
-        '
-        'btneliminar
-        '
-        Me.btneliminar.BackColor = System.Drawing.Color.Transparent
-        Me.btneliminar.BackgroundImage = Global.SisGabinete.My.Resources.Resources.eliminar
-        Me.btneliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.btneliminar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btneliminar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray
-        Me.btneliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray
-        Me.btneliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btneliminar.ForeColor = System.Drawing.Color.Gainsboro
-        Me.btneliminar.Location = New System.Drawing.Point(840, 476)
-        Me.btneliminar.Name = "btneliminar"
-        Me.btneliminar.Size = New System.Drawing.Size(66, 66)
-        Me.btneliminar.TabIndex = 42
-        Me.btneliminar.UseVisualStyleBackColor = False
-        '
         'btnnuevo
         '
         Me.btnnuevo.BackColor = System.Drawing.Color.Transparent
@@ -541,7 +446,7 @@ Partial Class frmventas
         Me.btnnuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnnuevo.ForeColor = System.Drawing.Color.Transparent
         Me.btnnuevo.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.btnnuevo.Location = New System.Drawing.Point(540, 476)
+        Me.btnnuevo.Location = New System.Drawing.Point(642, 476)
         Me.btnnuevo.Name = "btnnuevo"
         Me.btnnuevo.Size = New System.Drawing.Size(66, 66)
         Me.btnnuevo.TabIndex = 38
@@ -557,14 +462,10 @@ Partial Class frmventas
         Me.ClientSize = New System.Drawing.Size(1024, 621)
         Me.Controls.Add(Me.btncancelar)
         Me.Controls.Add(Me.btnguardar)
-        Me.Controls.Add(Me.btneditar)
-        Me.Controls.Add(Me.btneliminar)
         Me.Controls.Add(Me.btnnuevo)
         Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.txtidventa)
-        Me.Controls.Add(Me.dgvproductos)
-        Me.Controls.Add(Me.txtidproducto)
-        Me.Controls.Add(Me.txtidservicio)
+        Me.Controls.Add(Me.txtidetiqueta)
         Me.Controls.Add(Me.txtidempleado)
         Me.Controls.Add(Me.txtidcliente)
         Me.Controls.Add(Me.pandatossec)
@@ -584,7 +485,6 @@ Partial Class frmventas
         CType(Me.piccliente, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgvlistado, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgvservicios, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.dgvproductos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -592,10 +492,8 @@ Partial Class frmventas
     Friend WithEvents pandatossec As Panel
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents txtservicio As TextBox
+    Friend WithEvents txtetiqueta As TextBox
     Friend WithEvents pandatosprin As Panel
-    Friend WithEvents txthora As MaskedTextBox
-    Friend WithEvents Label9 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents dtpfecha As DateTimePicker
     Friend WithEvents checkgenerico As CheckBox
@@ -608,7 +506,7 @@ Partial Class frmventas
     Friend WithEvents dgvlistado As DataGridView
     Friend WithEvents txtidcliente As TextBox
     Friend WithEvents txtempleado As TextBox
-    Friend WithEvents btagregars As Button
+    Friend WithEvents btagregare As Button
     Friend WithEvents txtprecios As TextBox
     Friend WithEvents Label10 As Label
     Friend WithEvents btbuscars As Button
@@ -616,15 +514,11 @@ Partial Class frmventas
     Friend WithEvents txtcantidads As NumericUpDown
     Friend WithEvents Label3 As Label
     Friend WithEvents txtidempleado As TextBox
-    Friend WithEvents txtidservicio As TextBox
+    Friend WithEvents txtidetiqueta As TextBox
     Friend WithEvents dgvservicios As DataGridView
-    Friend WithEvents txtidproducto As TextBox
-    Friend WithEvents dgvproductos As DataGridView
     Friend WithEvents txtidventa As TextBox
     Friend WithEvents Label12 As Label
     Friend WithEvents btncancelar As Button
     Friend WithEvents btnguardar As Button
-    Friend WithEvents btneditar As Button
-    Friend WithEvents btneliminar As Button
     Friend WithEvents btnnuevo As Button
 End Class

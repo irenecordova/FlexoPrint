@@ -7,7 +7,7 @@ Public Class fdetalleservicio
     Public Function mostrar(ByVal dts As vdetalleservicio) As DataTable
         Try
             conectado()
-            cmd = New SqlCommand("mostrar_detalleservicio")
+            cmd = New SqlCommand("mostrar_detalle")
             cmd.CommandType = CommandType.StoredProcedure
 
             cmd.Connection = cn
@@ -33,13 +33,13 @@ Public Class fdetalleservicio
     Public Function ingresar(ByVal dts As vdetalleservicio) As Boolean
         Try
             conectado()
-            cmd = New SqlCommand("ingresar_detalleservicio")
+            cmd = New SqlCommand("ingresar_detalle")
             cmd.CommandType = CommandType.StoredProcedure
 
             cmd.Connection = cn
 
             cmd.Parameters.AddWithValue("@idventa", dts.gidventa)
-            cmd.Parameters.AddWithValue("@idservicio", dts.gidservicio)
+            cmd.Parameters.AddWithValue("@idetiqueta", dts.gidetiqueta)
             cmd.Parameters.AddWithValue("@idempleado", dts.gidempleado)
             cmd.Parameters.AddWithValue("@cantidad", dts.gcantidad)
             cmd.Parameters.AddWithValue("@preciounitario", dts.gpreciounitario)
@@ -61,14 +61,14 @@ Public Class fdetalleservicio
     Public Function editar(ByVal dts As vdetalleservicio) As Boolean
         Try
             conectado()
-            cmd = New SqlCommand("editar_detalleservicio")
+            cmd = New SqlCommand("editar_detalle")
             cmd.CommandType = CommandType.StoredProcedure
 
             cmd.Connection = cn
 
-            cmd.Parameters.AddWithValue("@iddetalleservicio", dts.giddetalleservicio)
+            cmd.Parameters.AddWithValue("@iddetalle", dts.giddetalle)
             cmd.Parameters.AddWithValue("@idventa", dts.gidventa)
-            cmd.Parameters.AddWithValue("@idservicio", dts.gidservicio)
+            cmd.Parameters.AddWithValue("@idetiqueta", dts.gidetiqueta)
             cmd.Parameters.AddWithValue("@idempleado", dts.gidempleado)
             cmd.Parameters.AddWithValue("@cantidad", dts.gcantidad)
             cmd.Parameters.AddWithValue("@preciounitario", dts.gpreciounitario)
@@ -90,12 +90,12 @@ Public Class fdetalleservicio
     Public Function eliminar(ByVal dts As vventa) As Boolean
         Try
             conectado()
-            cmd = New SqlCommand("eliminar_detalleservicio")
+            cmd = New SqlCommand("eliminar_detalle")
             cmd.CommandType = CommandType.StoredProcedure
 
             cmd.Connection = cn
 
-            cmd.Parameters.AddWithValue("@iddetalleservicio", dts.gidventa)
+            cmd.Parameters.AddWithValue("@iddetalle", dts.gidventa)
 
             If cmd.ExecuteNonQuery Then
                 Return True

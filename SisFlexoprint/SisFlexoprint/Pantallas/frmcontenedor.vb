@@ -133,10 +133,10 @@
 
     Private Sub btproductos_Click(sender As Object, e As EventArgs) Handles btproductos.Click
         pnpantallas.Controls.Clear()
-        frmproducto.TopLevel = False
-        frmproducto.Visible = True
-        pnpantallas.Controls.Add(frmproducto)
-        frmproducto.Show()
+        frmservicio.TopLevel = False
+        frmservicio.Visible = True
+        pnpantallas.Controls.Add(frmservicio)
+        frmservicio.Show()
     End Sub
 
     Private Sub btservicios_Click(sender As Object, e As EventArgs)

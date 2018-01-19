@@ -4,10 +4,10 @@ Public Class fservicio
     Inherits conexion
     Dim cmd As New SqlCommand
 
-    Public Function mostrar()
+    Public Function mostrar() As DataTable
         Try
             conectado()
-            cmd = New SqlCommand("mostrar_servicios")
+            cmd = New SqlCommand("mostrar_etiqueta")
             cmd.CommandType = CommandType.StoredProcedure
 
             cmd.Connection = cn
@@ -31,13 +31,16 @@ Public Class fservicio
     Public Function ingresar(ByVal dts As vservicio) As Boolean
         Try
             conectado()
-            cmd = New SqlCommand("ingresar_servicio")
+            cmd = New SqlCommand("ingresar_etiqueta")
             cmd.CommandType = CommandType.StoredProcedure
 
             cmd.Connection = cn
 
-            cmd.Parameters.AddWithValue("@descripcion", dts.gdescripcion)
-            cmd.Parameters.AddWithValue("@precio", dts.gprecio)
+            cmd.Parameters.AddWithValue("@arte", dts.garte)
+            cmd.Parameters.AddWithValue("@precioventa", dts.gprecioventa)
+            cmd.Parameters.AddWithValue("@medidax", dts.gmedidax)
+            cmd.Parameters.AddWithValue("@mediday", dts.gmediday)
+            cmd.Parameters.AddWithValue("@diametro", dts.gdiametro)
 
             If cmd.ExecuteNonQuery Then
                 Return True
@@ -56,14 +59,18 @@ Public Class fservicio
     Public Function editar(ByVal dts As vservicio) As Boolean
         Try
             conectado()
-            cmd = New SqlCommand("editar_servicio")
+            cmd = New SqlCommand("editar_etiqueta")
             cmd.CommandType = CommandType.StoredProcedure
 
             cmd.Connection = cn
 
-            cmd.Parameters.AddWithValue("@idservicio", dts.gidservicio)
-            cmd.Parameters.AddWithValue("@descripcion", dts.gdescripcion)
-            cmd.Parameters.AddWithValue("@precio", dts.gprecio)
+            cmd.Parameters.AddWithValue("@idetiqueta", dts.gidetiqueta)
+            cmd.Parameters.AddWithValue("@arte", dts.garte)
+            cmd.Parameters.AddWithValue("@precioventa", dts.gprecioventa)
+            cmd.Parameters.AddWithValue("@medidax", dts.gmedidax)
+            cmd.Parameters.AddWithValue("@mediday", dts.gmediday)
+            cmd.Parameters.AddWithValue("@diametro", dts.gdiametro)
+
 
             If cmd.ExecuteNonQuery Then
                 Return True
@@ -82,12 +89,12 @@ Public Class fservicio
     Public Function eliminar(ByVal dts As vservicio) As Boolean
         Try
             conectado()
-            cmd = New SqlCommand("eliminar_servicio")
+            cmd = New SqlCommand("eliminar_etiqueta")
             cmd.CommandType = CommandType.StoredProcedure
 
             cmd.Connection = cn
 
-            cmd.Parameters.AddWithValue("@idservicio", dts.gidservicio)
+            cmd.Parameters.AddWithValue("@idetiqueta", dts.gidetiqueta)
 
             If cmd.ExecuteNonQuery Then
                 Return True
@@ -96,8 +103,8 @@ Public Class fservicio
             End If
 
         Catch ex As Exception
-            If ex.Message.ToString = "The DELETE statement conflicted with the REFERENCE constraint ""FK__detalle_s__idser__42E1EEFE"". The conflict occurred in database ""dbGabinete"", table ""dbo.detalle_servicio"", column 'idservicio'." & vbNewLine & "The statement has been terminated." Then
-                MessageBox.Show("No se puede eliminar el servicio. Existe en ventas registradas.", "Eliminando Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            If ex.Message.ToString = "The DELETE statement conflicted with the REFERENCE constraint ""FK__detalle_p__idpro__3F115E1A"". The conflict occurred in database ""dbGabinete"", table ""dbo.detalle_producto"", column 'idproducto'." & vbNewLine & "The statement has been terminated." Then
+                MessageBox.Show("No se puede eliminar el producto. Existe en ventas registradas.", "Eliminando Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Else
                 MsgBox(ex.Message)
             End If

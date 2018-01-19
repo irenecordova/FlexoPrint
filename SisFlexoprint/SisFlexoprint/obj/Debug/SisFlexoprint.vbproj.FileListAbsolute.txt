@@ -7,7 +7,6 @@ C:\Users\USUARIO\Desktop\ProyectoARP2\SisFlexoprint\SisFlexoprint\obj\Debug\SisG
 C:\Users\USUARIO\Desktop\ProyectoARP2\SisFlexoprint\SisFlexoprint\obj\Debug\SisGabinete.frmcliente.resources
 C:\Users\USUARIO\Desktop\ProyectoARP2\SisFlexoprint\SisFlexoprint\obj\Debug\SisGabinete.frmcontenedor.resources
 C:\Users\USUARIO\Desktop\ProyectoARP2\SisFlexoprint\SisFlexoprint\obj\Debug\SisGabinete.frmempleado.resources
-C:\Users\USUARIO\Desktop\ProyectoARP2\SisFlexoprint\SisFlexoprint\obj\Debug\SisGabinete.frmproducto.resources
 C:\Users\USUARIO\Desktop\ProyectoARP2\SisFlexoprint\SisFlexoprint\obj\Debug\SisGabinete.frmservicio.resources
 C:\Users\USUARIO\Desktop\ProyectoARP2\SisFlexoprint\SisFlexoprint\obj\Debug\SisGabinete.frmusuario.resources
 C:\Users\USUARIO\Desktop\ProyectoARP2\SisFlexoprint\SisFlexoprint\obj\Debug\SisGabinete.frmventas.resources

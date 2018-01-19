@@ -1,15 +1,15 @@
 ﻿Public Class vdetalleservicio
-    Dim iddetalleservicio, idventa, idservicio, idempleado, cantidad As Integer
+    Dim iddetalle, idventa, idetiqueta, idempleado, cantidad As Integer
     Dim preciounitario As Double
 
     'Setter and getter
 
-    Public Property giddetalleservicio
+    Public Property giddetalle
         Get
-            Return iddetalleservicio
+            Return iddetalle
         End Get
         Set(ByVal value)
-            iddetalleservicio = value
+            iddetalle = value
         End Set
     End Property
 
@@ -22,12 +22,12 @@
         End Set
     End Property
 
-    Public Property gidservicio
+    Public Property gidetiqueta
         Get
-            Return idservicio
+            Return idetiqueta
         End Get
         Set(ByVal value)
-            idservicio = value
+            idetiqueta = value
         End Set
     End Property
 
@@ -64,10 +64,10 @@
 
     End Sub
 
-    Public Sub New(ByVal iddetalleservicio As Integer, ByVal idventa As Integer, ByVal idservicio As Integer, ByVal idempleado As Integer, ByVal cantidad As Integer, ByVal preciounitario As Double)
-        giddetalleservicio = iddetalleservicio
+    Public Sub New(ByVal iddetalle As Integer, ByVal idventa As Integer, ByVal idetiqueta As Integer, ByVal idempleado As Integer, ByVal cantidad As Integer, ByVal preciounitario As Double)
+        giddetalle = iddetalle
         gidventa = idventa
-        gidservicio = idservicio
+        gidetiqueta = idetiqueta
         gidempleado = idempleado
         gcantidad = cantidad
         preciounitario = preciounitario

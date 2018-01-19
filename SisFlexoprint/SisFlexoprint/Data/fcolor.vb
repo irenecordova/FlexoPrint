@@ -1,16 +1,18 @@
 ﻿Imports System.Data.SqlClient
 
-Public Class fproducto
+Public Class fcolor
     Inherits conexion
     Dim cmd As New SqlCommand
 
-    Public Function mostrar() As DataTable
+    Public Function mostrar(ByVal dts As vcolor) As DataTable
         Try
             conectado()
-            cmd = New SqlCommand("mostrar_productos")
+            cmd = New SqlCommand("mostrar_color")
             cmd.CommandType = CommandType.StoredProcedure
 
             cmd.Connection = cn
+
+            cmd.Parameters.AddWithValue("@idetiqueta", dts.gidetiqueta)
 
             If cmd.ExecuteNonQuery Then
                 Dim dt As New DataTable
@@ -28,17 +30,17 @@ Public Class fproducto
         End Try
     End Function
 
-    Public Function ingresar(ByVal dts As vproducto) As Boolean
+    Public Function ingresar(ByVal dts As vcolor) As Boolean
         Try
             conectado()
-            cmd = New SqlCommand("ingresar_producto")
+            cmd = New SqlCommand("ingresar_color")
             cmd.CommandType = CommandType.StoredProcedure
 
             cmd.Connection = cn
 
-            cmd.Parameters.AddWithValue("@descripcion", dts.gdescripcion)
-            cmd.Parameters.AddWithValue("@precioventa", dts.gprecioventa)
-            cmd.Parameters.AddWithValue("@stock", dts.gstock)
+            cmd.Parameters.AddWithValue("@idetiqueta", dts.gidetiqueta)
+            cmd.Parameters.AddWithValue("@codigoColor", dts.gcodigoColor)
+
 
             If cmd.ExecuteNonQuery Then
                 Return True
@@ -54,18 +56,17 @@ Public Class fproducto
         End Try
     End Function
 
-    Public Function editar(ByVal dts As vproducto) As Boolean
+    Public Function editar(ByVal dts As vcolor) As Boolean
         Try
             conectado()
-            cmd = New SqlCommand("editar_producto")
+            cmd = New SqlCommand("editar_color")
             cmd.CommandType = CommandType.StoredProcedure
 
             cmd.Connection = cn
 
-            cmd.Parameters.AddWithValue("@idproducto", dts.gidproducto)
-            cmd.Parameters.AddWithValue("@descripcion", dts.gdescripcion)
-            cmd.Parameters.AddWithValue("@precioventa", dts.gprecioventa)
-            cmd.Parameters.AddWithValue("@stock", dts.gstock)
+            cmd.Parameters.AddWithValue("@idcolor", dts.gidcolor)
+            cmd.Parameters.AddWithValue("@idetiqueta", dts.gidetiqueta)
+            cmd.Parameters.AddWithValue("@codigoColor", dts.gcodigoColor)
 
             If cmd.ExecuteNonQuery Then
                 Return True
@@ -81,15 +82,15 @@ Public Class fproducto
         End Try
     End Function
 
-    Public Function eliminar(ByVal dts As vproducto) As Boolean
+    Public Function eliminar(ByVal dts As vcolor) As Boolean
         Try
             conectado()
-            cmd = New SqlCommand("eliminar_producto")
+            cmd = New SqlCommand("eliminar_color")
             cmd.CommandType = CommandType.StoredProcedure
 
             cmd.Connection = cn
 
-            cmd.Parameters.AddWithValue("@idproducto", dts.gidproducto)
+            cmd.Parameters.AddWithValue("@idcolor", dts.gidcolor)
 
             If cmd.ExecuteNonQuery Then
                 Return True
@@ -98,8 +99,8 @@ Public Class fproducto
             End If
 
         Catch ex As Exception
-            If ex.Message.ToString = "The DELETE statement conflicted with the REFERENCE constraint ""FK__detalle_p__idpro__3F115E1A"". The conflict occurred in database ""dbGabinete"", table ""dbo.detalle_producto"", column 'idproducto'." & vbNewLine & "The statement has been terminated." Then
-                MessageBox.Show("No se puede eliminar el producto. Existe en ventas registradas.", "Eliminando Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            If ex.Message.ToString = "The DELETE statement conflicted with the REFERENCE constraint ""FK__detalle_p__idven__3E1D39E1"". The conflict occurred in database ""dbGabinete"", table ""dbo.detalle_producto"", column 'idventa'." & vbNewLine & "The statement has been terminated." Then
+                MessageBox.Show("No se puede eliminar la venta. Existen registros de productos y/o servicios.", "Eliminando Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Else
                 MsgBox(ex.Message)
             End If

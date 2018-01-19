@@ -1,34 +1,61 @@
 ﻿Public Class vservicio
-    Dim idservicio As Integer
-    Dim descripcion As String
-    Dim precio As Double
+    Dim idetiqueta As Integer
+    Dim arte As String
+    Dim precioventa, medidax, mediday, diametro As Double
 
     'Setter and getter
 
-    Public Property gidservicio
+    Public Property gidetiqueta
         Get
-            Return idservicio
+            Return idetiqueta
         End Get
         Set(ByVal value)
-            idservicio = value
+            idetiqueta = value
         End Set
     End Property
 
-    Public Property gdescripcion
+    Public Property garte
         Get
-            Return descripcion
+            Return arte
         End Get
         Set(ByVal value)
-            descripcion = value
+            arte = value
         End Set
     End Property
 
-    Public Property gprecio
+    Public Property gprecioventa
         Get
-            Return precio
+            Return precioventa
         End Get
         Set(ByVal value)
-            precio = value
+            precioventa = value
+        End Set
+    End Property
+
+    Public Property gmedidax
+        Get
+            Return medidax
+        End Get
+        Set(ByVal value)
+            medidax = value
+        End Set
+    End Property
+
+    Public Property gmediday
+        Get
+            Return mediday
+        End Get
+        Set(ByVal value)
+            mediday = value
+        End Set
+    End Property
+
+    Public Property gdiametro
+        Get
+            Return diametro
+        End Get
+        Set(ByVal value)
+            diametro = value
         End Set
     End Property
 
@@ -38,9 +65,12 @@
 
     End Sub
 
-    Public Sub New(ByVal idservicio As Integer, ByVal descripcion As String, ByVal precio As Double)
-        gidservicio = idservicio
-        gdescripcion = descripcion
-        gprecio = precio
+    Public Sub New(ByVal idetiqueta As Integer, ByVal arte As String, ByVal precioventa As Double, ByVal medidax As Double, ByVal mediday As Double, ByVal diametro As Double)
+        gidetiqueta = idetiqueta
+        garte = arte
+        gprecioventa = precioventa
+        gmedidax = medidax
+        gmediday = mediday
+        gdiametro = diametro
     End Sub
 End Class

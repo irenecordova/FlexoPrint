@@ -37,9 +37,9 @@ Public Class fventa
             cmd.Connection = cn
 
             cmd.Parameters.AddWithValue("@idcliente", dts.gidcliente)
-            cmd.Parameters.AddWithValue("@reserva", dts.greserva)
+
             cmd.Parameters.AddWithValue("@fecha", dts.gfecha)
-            'cmd.Parameters.AddWithValue("@hora", Nothing)
+
             cmd.Parameters.AddWithValue("@total", dts.gtotal)
 
             If cmd.ExecuteNonQuery Then
@@ -66,9 +66,8 @@ Public Class fventa
 
             cmd.Parameters.AddWithValue("@idventa", dts.gidventa)
             cmd.Parameters.AddWithValue("@idcliente", dts.gidcliente)
-            cmd.Parameters.AddWithValue("@reserva", dts.greserva)
+
             cmd.Parameters.AddWithValue("@fecha", dts.gfecha)
-            'cmd.Parameters.AddWithValue("@hora", Nothing)
             cmd.Parameters.AddWithValue("@total", dts.gtotal)
 
             If cmd.ExecuteNonQuery Then
@@ -116,33 +115,7 @@ Public Class fventa
     Public Function mostrar(ByVal dts As Integer) As DataTable
         Try
             conectado()
-            cmd = New SqlCommand("mostrar_detalleproducto")
-            cmd.CommandType = CommandType.StoredProcedure
-
-            cmd.Connection = cn
-
-            cmd.Parameters.AddWithValue("@idventa", dts)
-
-            If cmd.ExecuteNonQuery Then
-                Dim dt As New DataTable
-                Dim da As New SqlDataAdapter(cmd)
-                da.Fill(dt)
-                Return dt
-            Else
-                Return Nothing
-            End If
-        Catch ex As Exception
-            MsgBox(ex.Message)
-            Return Nothing
-        Finally
-            desconectado()
-        End Try
-    End Function
-
-    Public Function mostrarserv(ByVal dts As Integer) As DataTable
-        Try
-            conectado()
-            cmd = New SqlCommand("mostrar_detalleservicio")
+            cmd = New SqlCommand("mostrar_detalle")
             cmd.CommandType = CommandType.StoredProcedure
 
             cmd.Connection = cn
@@ -165,3 +138,4 @@ Public Class fventa
         End Try
     End Function
 End Class
+
