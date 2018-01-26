@@ -152,7 +152,6 @@ Public Class frmservicio
     Public Sub limpiar()
         txtprecio.Text = ""
         txtarte.Text = ""
-        txtprecio.Text = ""
         txtmedidax.Text = ""
         txtmediday.Text = ""
         txtdiametro.Text = ""
@@ -164,6 +163,8 @@ Public Class frmservicio
 
     Private Sub dgvlistado_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvlistado.CellClick
         limpiar()
+
+        txtidetiqueta.Text = dgvlistado.SelectedCells.Item(0).Value.ToString
         txtarte.Text = dgvlistado.SelectedCells.Item(1).Value.ToString
         txtprecio.Text = dgvlistado.SelectedCells.Item(2).Value.ToString
         txtmedidax.Text = dgvlistado.SelectedCells.Item(3).Value.ToString
@@ -240,7 +241,7 @@ Public Class frmservicio
     Private Sub btnguardar_Click(sender As Object, e As EventArgs) Handles btnguardar.Click
         txtbuscar.Select()
         If save_edit = 1 Then
-            If Me.ValidateChildren = True And txtprecio.Text <> "" And txtarte.Text <> "" And txtmedidax.Text <> "" Then
+            If Me.ValidateChildren = True And txtprecio.Text <> "" And txtarte.Text <> "" Then
                 Try
                     Dim dts As New vservicio
                     Dim func As New fservicio
@@ -328,7 +329,9 @@ Public Class frmservicio
                 Dim dts As New vcolor
                 Dim func As New fcolor
 
-                dts.gidetiqueta = dgvcolores.SelectedCells.Item(1).Value
+
+
+                dts.gidetiqueta = txtidetiqueta.Text
                 dts.gcodigoColor = txtcodigoColor.Text
 
                 If func.ingresar(dts) Then

@@ -56,7 +56,6 @@ Public Class frmventas
         dgvlistado.Columns("idcliente").Visible = False
         dgvlistado.Columns("fecha").Visible = False
         dgvlistado.Columns("hora").Visible = False
-        dgvlistado.Columns("reserva").Visible = False
 
         'Visibles
         dgvlistado.Columns("nombre").HeaderText = "Nombres"

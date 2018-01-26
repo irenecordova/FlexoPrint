@@ -220,7 +220,7 @@ Partial Class frmservicio
         Me.dgvlistado.AllowUserToDeleteRows = False
         Me.dgvlistado.AllowUserToResizeColumns = False
         Me.dgvlistado.AllowUserToResizeRows = False
-        Me.dgvlistado.BackgroundColor = System.Drawing.Color.MediumSeaGreen
+        Me.dgvlistado.BackgroundColor = System.Drawing.Color.Honeydew
         Me.dgvlistado.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgvlistado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvlistado.Location = New System.Drawing.Point(60, 91)
@@ -423,7 +423,7 @@ Partial Class frmservicio
         Me.dgvcolores.AllowUserToDeleteRows = False
         Me.dgvcolores.AllowUserToResizeColumns = False
         Me.dgvcolores.AllowUserToResizeRows = False
-        Me.dgvcolores.BackgroundColor = System.Drawing.Color.MediumSeaGreen
+        Me.dgvcolores.BackgroundColor = System.Drawing.Color.Honeydew
         Me.dgvcolores.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgvcolores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvcolores.Location = New System.Drawing.Point(60, 396)

@@ -189,5 +189,7 @@
         Label6.Visible = False
     End Sub
 
+    Private Sub pnpantallas_Paint(sender As Object, e As PaintEventArgs) Handles pnpantallas.Paint
 
+    End Sub
 End Class
