@@ -5,7 +5,7 @@
         btconfiguracion.Visible = False
         Label4.Visible = False
 
-        btproductos.Visible = False
+
 
         frmempleado.btnnuevo.Visible = False
         frmempleado.btnguardar.Visible = False
@@ -120,6 +120,14 @@
         pnlogin.Visible = False
         pblogo.Visible = False
         pnbotones2.Visible = True
+        Label3.Visible = True
+        Label5.Visible = True
+        Label1.Visible = True
+        Label6.Visible = True
+        btclientes.Visible = True
+        btempleados.Visible = True
+        btventas.Visible = True
+        btproductos.Visible = True
         empleado()
     End Sub
 
@@ -181,7 +189,5 @@
         Label6.Visible = False
     End Sub
 
-    Private Sub pnbotones2_Paint(sender As Object, e As PaintEventArgs) Handles pnbotones2.Paint
 
-    End Sub
 End Class

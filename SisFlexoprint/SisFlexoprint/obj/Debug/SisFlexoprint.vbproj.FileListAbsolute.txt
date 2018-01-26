@@ -20,7 +20,6 @@ C:\Users\Allan\Desktop\ProyectoARP2\SisFlexoprint\SisFlexoprint\obj\Debug\SisGab
 C:\Users\Allan\Desktop\ProyectoARP2\SisFlexoprint\SisFlexoprint\obj\Debug\SisGabinete.frmcliente.resources
 C:\Users\Allan\Desktop\ProyectoARP2\SisFlexoprint\SisFlexoprint\obj\Debug\SisGabinete.frmcontenedor.resources
 C:\Users\Allan\Desktop\ProyectoARP2\SisFlexoprint\SisFlexoprint\obj\Debug\SisGabinete.frmempleado.resources
-C:\Users\Allan\Desktop\ProyectoARP2\SisFlexoprint\SisFlexoprint\obj\Debug\SisGabinete.frmproducto.resources
 C:\Users\Allan\Desktop\ProyectoARP2\SisFlexoprint\SisFlexoprint\obj\Debug\SisGabinete.frmservicio.resources
 C:\Users\Allan\Desktop\ProyectoARP2\SisFlexoprint\SisFlexoprint\obj\Debug\SisGabinete.frmusuario.resources
 C:\Users\Allan\Desktop\ProyectoARP2\SisFlexoprint\SisFlexoprint\obj\Debug\SisGabinete.frmventas.resources

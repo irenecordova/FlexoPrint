@@ -28,8 +28,6 @@ Partial Class frmcontenedor
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.pnlogin = New System.Windows.Forms.Panel()
-        Me.btsalir = New System.Windows.Forms.Button()
-        Me.btingresar = New System.Windows.Forms.Button()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.txtpassword = New System.Windows.Forms.TextBox()
@@ -37,8 +35,12 @@ Partial Class frmcontenedor
         Me.pnbotones2 = New System.Windows.Forms.Panel()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
         Me.btminimizar = New System.Windows.Forms.Button()
         Me.btexit = New System.Windows.Forms.Button()
+        Me.btsalir = New System.Windows.Forms.Button()
+        Me.btingresar = New System.Windows.Forms.Button()
         Me.btconfiguracion = New System.Windows.Forms.Button()
         Me.btventas = New System.Windows.Forms.Button()
         Me.btempleados = New System.Windows.Forms.Button()
@@ -82,6 +84,7 @@ Partial Class frmcontenedor
         Me.Label4.TabIndex = 44
         Me.Label4.Text = "Settings"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.Label4.Visible = False
         '
         'Label5
         '
@@ -125,6 +128,8 @@ Partial Class frmcontenedor
         'pnlogin
         '
         Me.pnlogin.BackColor = System.Drawing.Color.MediumSeaGreen
+        Me.pnlogin.Controls.Add(Me.Label8)
+        Me.pnlogin.Controls.Add(Me.Label2)
         Me.pnlogin.Controls.Add(Me.btsalir)
         Me.pnlogin.Controls.Add(Me.btingresar)
         Me.pnlogin.Controls.Add(Me.Label9)
@@ -133,32 +138,14 @@ Partial Class frmcontenedor
         Me.pnlogin.Controls.Add(Me.txtuser)
         Me.pnlogin.Location = New System.Drawing.Point(392, 245)
         Me.pnlogin.Name = "pnlogin"
-        Me.pnlogin.Size = New System.Drawing.Size(400, 131)
+        Me.pnlogin.Size = New System.Drawing.Size(400, 213)
         Me.pnlogin.TabIndex = 4
-        '
-        'btsalir
-        '
-        Me.btsalir.Location = New System.Drawing.Point(245, 88)
-        Me.btsalir.Name = "btsalir"
-        Me.btsalir.Size = New System.Drawing.Size(135, 23)
-        Me.btsalir.TabIndex = 4
-        Me.btsalir.Text = "Empleado"
-        Me.btsalir.UseVisualStyleBackColor = True
-        '
-        'btingresar
-        '
-        Me.btingresar.Location = New System.Drawing.Point(100, 88)
-        Me.btingresar.Name = "btingresar"
-        Me.btingresar.Size = New System.Drawing.Size(135, 23)
-        Me.btingresar.TabIndex = 3
-        Me.btingresar.Text = "Ingresar"
-        Me.btingresar.UseVisualStyleBackColor = True
         '
         'Label9
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.Label9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Label9.Location = New System.Drawing.Point(17, 53)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(77, 17)
@@ -169,7 +156,7 @@ Partial Class frmcontenedor
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.Label10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Label10.Location = New System.Drawing.Point(17, 22)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(54, 17)
@@ -239,6 +226,26 @@ Partial Class frmcontenedor
         Me.Label6.Text = "Etiquetas"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(129, 168)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(96, 20)
+        Me.Label2.TabIndex = 9
+        Me.Label2.Text = "Iniciar Sesión"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(268, 168)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(77, 20)
+        Me.Label8.TabIndex = 10
+        Me.Label8.Text = "Empleado"
+        '
         'btminimizar
         '
         Me.btminimizar.BackColor = System.Drawing.SystemColors.ActiveCaptionText
@@ -269,6 +276,32 @@ Partial Class frmcontenedor
         Me.btexit.TabIndex = 42
         Me.btexit.UseVisualStyleBackColor = False
         '
+        'btsalir
+        '
+        Me.btsalir.BackgroundImage = Global.SisGabinete.My.Resources.Resources.empleado
+        Me.btsalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.btsalir.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btsalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btsalir.Location = New System.Drawing.Point(272, 88)
+        Me.btsalir.Name = "btsalir"
+        Me.btsalir.Size = New System.Drawing.Size(66, 66)
+        Me.btsalir.TabIndex = 4
+        Me.btsalir.UseVisualStyleBackColor = True
+        '
+        'btingresar
+        '
+        Me.btingresar.BackgroundImage = Global.SisGabinete.My.Resources.Resources.login
+        Me.btingresar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.btingresar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btingresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btingresar.ImageAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.btingresar.Location = New System.Drawing.Point(142, 88)
+        Me.btingresar.Name = "btingresar"
+        Me.btingresar.Size = New System.Drawing.Size(66, 66)
+        Me.btingresar.TabIndex = 3
+        Me.btingresar.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.btingresar.UseVisualStyleBackColor = True
+        '
         'btconfiguracion
         '
         Me.btconfiguracion.BackColor = System.Drawing.SystemColors.ActiveCaptionText
@@ -283,6 +316,7 @@ Partial Class frmcontenedor
         Me.btconfiguracion.Size = New System.Drawing.Size(50, 50)
         Me.btconfiguracion.TabIndex = 43
         Me.btconfiguracion.UseVisualStyleBackColor = False
+        Me.btconfiguracion.Visible = False
         '
         'btventas
         '
@@ -372,8 +406,8 @@ Partial Class frmcontenedor
         'pblogo
         '
         Me.pblogo.BackColor = System.Drawing.Color.Transparent
-        Me.pblogo.BackgroundImage = Global.SisGabinete.My.Resources.Resources.Logo
-        Me.pblogo.Image = Global.SisGabinete.My.Resources.Resources.Logo
+        Me.pblogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.pblogo.Image = Global.SisGabinete.My.Resources.Resources.logoFlexo
         Me.pblogo.Location = New System.Drawing.Point(398, 28)
         Me.pblogo.Name = "pblogo"
         Me.pblogo.Size = New System.Drawing.Size(201, 205)
@@ -433,4 +467,6 @@ Partial Class frmcontenedor
     Friend WithEvents btcerrar As Button
     Friend WithEvents pblogo As PictureBox
     Friend WithEvents pnpantallas As Panel
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label8 As Label
 End Class
