@@ -147,15 +147,6 @@
         frmservicio.Show()
     End Sub
 
-    Private Sub btservicios_Click(sender As Object, e As EventArgs)
-        pnpantallas.Controls.Clear()
-        frmservicio.TopLevel = False
-        frmservicio.Visible = True
-        pnpantallas.Controls.Add(frmservicio)
-        frmservicio.Show()
-    End Sub
-
-
     Private Sub btconfiguracion_Click(sender As Object, e As EventArgs) Handles btconfiguracion.Click
         pnpantallas.Controls.Clear()
         frmusuario.TopLevel = False
@@ -173,23 +164,29 @@
     End Sub
 
     Private Sub btcerrar_Click(sender As Object, e As EventArgs) Handles btcerrar.Click
-        pnpantallas.Visible = True
-        pnlogin.Visible = True
-        pblogo.Visible = True
-        pnbotones.Visible = True
-        pnbotones2.Visible = True
+
+
+
         btclientes.Visible = False
         btempleados.Visible = False
         btventas.Visible = False
         btproductos.Visible = False
-        pblogo.Visible = True
         Label3.Visible = False
         Label5.Visible = False
         Label1.Visible = False
         Label6.Visible = False
+        frmventas.Visible = False
+        frmcliente.Visible = False
+        frmempleado.Visible = False
+        frmservicio.Visible = False
+        frmusuario.Visible = False
+
+        pnpantallas.Visible = True
+        pblogo.Visible = True
+        pnlogin.Visible = True
+        pnbotones.Visible = True
+        pnbotones2.Visible = True
+
     End Sub
 
-    Private Sub pnpantallas_Paint(sender As Object, e As PaintEventArgs) Handles pnpantallas.Paint
-
-    End Sub
 End Class

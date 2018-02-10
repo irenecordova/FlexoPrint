@@ -329,8 +329,6 @@ Public Class frmservicio
                 Dim dts As New vcolor
                 Dim func As New fcolor
 
-
-
                 dts.gidetiqueta = txtidetiqueta.Text
                 dts.gcodigoColor = txtcodigoColor.Text
 
@@ -338,14 +336,14 @@ Public Class frmservicio
                     mostrar()
 
                     txtcodigoColor.Text = ""
-                    txtidcolor.Text = ""
+
 
                 Else
                     MessageBox.Show("No se pudo completar el registro", "Guardando Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
                     mostrar()
 
                     txtcodigoColor.Text = ""
-                    txtidcolor.Text = ""
+
                 End If
             Catch ex As Exception
                 MsgBox(ex.Message)
@@ -360,4 +358,5 @@ Public Class frmservicio
             txtcodigoColor.Text = Convert.ToString(ColorDialog1.Color)
         End If
     End Sub
+
 End Class

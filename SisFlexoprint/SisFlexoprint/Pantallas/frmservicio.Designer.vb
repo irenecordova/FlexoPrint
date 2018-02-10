@@ -26,6 +26,7 @@ Partial Class frmservicio
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.pandatossec = New System.Windows.Forms.Panel()
+        Me.Label8 = New System.Windows.Forms.Label()
         Me.btbuscars = New System.Windows.Forms.Button()
         Me.btagregarc = New System.Windows.Forms.Button()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -52,10 +53,11 @@ Partial Class frmservicio
         Me.btneliminar = New System.Windows.Forms.Button()
         Me.btnnuevo = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.txtidcolor = New System.Windows.Forms.TextBox()
         Me.ColorDialog1 = New System.Windows.Forms.ColorDialog()
         Me.txtidetiqueta = New System.Windows.Forms.TextBox()
         Me.dgvcolores = New System.Windows.Forms.DataGridView()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
         Me.pandatossec.SuspendLayout()
         CType(Me.dgvlistado, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pandatosprin.SuspendLayout()
@@ -67,6 +69,9 @@ Partial Class frmservicio
         'pandatossec
         '
         Me.pandatossec.BackColor = System.Drawing.Color.White
+        Me.pandatossec.Controls.Add(Me.Label10)
+        Me.pandatossec.Controls.Add(Me.Label9)
+        Me.pandatossec.Controls.Add(Me.Label8)
         Me.pandatossec.Controls.Add(Me.btbuscars)
         Me.pandatossec.Controls.Add(Me.btagregarc)
         Me.pandatossec.Controls.Add(Me.Label6)
@@ -83,6 +88,17 @@ Partial Class frmservicio
         Me.pandatossec.Name = "pandatossec"
         Me.pandatossec.Size = New System.Drawing.Size(463, 188)
         Me.pandatossec.TabIndex = 11
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.Label8.Location = New System.Drawing.Point(413, 57)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(26, 17)
+        Me.Label8.TabIndex = 43
+        Me.Label8.Text = "cm"
         '
         'btbuscars
         '
@@ -153,7 +169,7 @@ Partial Class frmservicio
         Me.txtdiametro.Location = New System.Drawing.Point(157, 111)
         Me.txtdiametro.MaxLength = 10
         Me.txtdiametro.Name = "txtdiametro"
-        Me.txtdiametro.Size = New System.Drawing.Size(287, 25)
+        Me.txtdiametro.Size = New System.Drawing.Size(250, 25)
         Me.txtdiametro.TabIndex = 11
         '
         'txtmediday
@@ -165,7 +181,7 @@ Partial Class frmservicio
         Me.txtmediday.Location = New System.Drawing.Point(157, 80)
         Me.txtmediday.MaxLength = 60
         Me.txtmediday.Name = "txtmediday"
-        Me.txtmediday.Size = New System.Drawing.Size(287, 25)
+        Me.txtmediday.Size = New System.Drawing.Size(250, 25)
         Me.txtmediday.TabIndex = 10
         '
         'Label3
@@ -199,7 +215,7 @@ Partial Class frmservicio
         Me.txtmedidax.Location = New System.Drawing.Point(156, 49)
         Me.txtmedidax.MaxLength = 10
         Me.txtmedidax.Name = "txtmedidax"
-        Me.txtmedidax.Size = New System.Drawing.Size(287, 25)
+        Me.txtmedidax.Size = New System.Drawing.Size(251, 25)
         Me.txtmedidax.TabIndex = 5
         '
         'txtarte
@@ -401,21 +417,12 @@ Partial Class frmservicio
         Me.PictureBox1.TabIndex = 38
         Me.PictureBox1.TabStop = False
         '
-        'txtidcolor
-        '
-        Me.txtidcolor.Location = New System.Drawing.Point(501, 151)
-        Me.txtidcolor.Name = "txtidcolor"
-        Me.txtidcolor.Size = New System.Drawing.Size(100, 20)
-        Me.txtidcolor.TabIndex = 39
-        Me.txtidcolor.Visible = False
-        '
         'txtidetiqueta
         '
         Me.txtidetiqueta.Location = New System.Drawing.Point(627, 33)
         Me.txtidetiqueta.Name = "txtidetiqueta"
         Me.txtidetiqueta.Size = New System.Drawing.Size(100, 20)
         Me.txtidetiqueta.TabIndex = 40
-        Me.txtidetiqueta.Visible = False
         '
         'dgvcolores
         '
@@ -440,6 +447,28 @@ Partial Class frmservicio
         Me.dgvcolores.Size = New System.Drawing.Size(381, 209)
         Me.dgvcolores.TabIndex = 41
         '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.Label9.Location = New System.Drawing.Point(413, 88)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(26, 17)
+        Me.Label9.TabIndex = 44
+        Me.Label9.Text = "cm"
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.Label10.Location = New System.Drawing.Point(413, 116)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(26, 17)
+        Me.Label10.TabIndex = 45
+        Me.Label10.Text = "cm"
+        '
         'frmservicio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -449,7 +478,6 @@ Partial Class frmservicio
         Me.ClientSize = New System.Drawing.Size(1024, 621)
         Me.Controls.Add(Me.dgvcolores)
         Me.Controls.Add(Me.txtidetiqueta)
-        Me.Controls.Add(Me.txtidcolor)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.btncancelar)
         Me.Controls.Add(Me.btnguardar)
@@ -501,7 +529,6 @@ Partial Class frmservicio
     Friend WithEvents Label4 As Label
     Friend WithEvents txtdiametro As TextBox
     Friend WithEvents txtmediday As TextBox
-    Friend WithEvents txtidcolor As TextBox
     Friend WithEvents ColorDialog1 As ColorDialog
     Friend WithEvents txtcodigoColor As TextBox
     Friend WithEvents Label6 As Label
@@ -509,4 +536,7 @@ Partial Class frmservicio
     Friend WithEvents btbuscars As Button
     Friend WithEvents txtidetiqueta As TextBox
     Friend WithEvents dgvcolores As DataGridView
+    Friend WithEvents Label8 As Label
+    Friend WithEvents Label10 As Label
+    Friend WithEvents Label9 As Label
 End Class

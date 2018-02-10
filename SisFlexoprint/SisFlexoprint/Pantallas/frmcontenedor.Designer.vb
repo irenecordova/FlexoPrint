@@ -41,14 +41,14 @@ Partial Class frmcontenedor
         Me.pnpantallas = New System.Windows.Forms.Panel()
         Me.pblogo = New System.Windows.Forms.PictureBox()
         Me.pnlogin = New System.Windows.Forms.Panel()
-        Me.txtuser = New System.Windows.Forms.TextBox()
-        Me.txtpassword = New System.Windows.Forms.TextBox()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.btingresar = New System.Windows.Forms.Button()
-        Me.btsalir = New System.Windows.Forms.Button()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.btsalir = New System.Windows.Forms.Button()
+        Me.btingresar = New System.Windows.Forms.Button()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.txtpassword = New System.Windows.Forms.TextBox()
+        Me.txtuser = New System.Windows.Forms.TextBox()
         Me.pnbotones.SuspendLayout()
         Me.pnbotones2.SuspendLayout()
         Me.pnpantallas.SuspendLayout()
@@ -321,54 +321,42 @@ Partial Class frmcontenedor
         Me.pnlogin.Size = New System.Drawing.Size(400, 201)
         Me.pnlogin.TabIndex = 4
         '
-        'txtuser
+        'Label8
         '
-        Me.txtuser.BackColor = System.Drawing.Color.White
-        Me.txtuser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtuser.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtuser.ForeColor = System.Drawing.Color.Black
-        Me.txtuser.Location = New System.Drawing.Point(100, 20)
-        Me.txtuser.MaxLength = 40
-        Me.txtuser.Name = "txtuser"
-        Me.txtuser.Size = New System.Drawing.Size(280, 25)
-        Me.txtuser.TabIndex = 1
+        Me.Label8.AutoSize = True
+        Me.Label8.BackColor = System.Drawing.Color.Transparent
+        Me.Label8.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.ForeColor = System.Drawing.SystemColors.Window
+        Me.Label8.Location = New System.Drawing.Point(268, 168)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(77, 20)
+        Me.Label8.TabIndex = 10
+        Me.Label8.Text = "Empleado"
         '
-        'txtpassword
+        'Label2
         '
-        Me.txtpassword.BackColor = System.Drawing.Color.White
-        Me.txtpassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtpassword.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtpassword.ForeColor = System.Drawing.Color.Black
-        Me.txtpassword.Location = New System.Drawing.Point(100, 51)
-        Me.txtpassword.MaxLength = 10
-        Me.txtpassword.Name = "txtpassword"
-        Me.txtpassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(8226)
-        Me.txtpassword.Size = New System.Drawing.Size(280, 25)
-        Me.txtpassword.TabIndex = 2
+        Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.SystemColors.Window
+        Me.Label2.Location = New System.Drawing.Point(129, 168)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(96, 20)
+        Me.Label2.TabIndex = 9
+        Me.Label2.Text = "Iniciar Sesión"
         '
-        'Label10
+        'btsalir
         '
-        Me.Label10.AutoSize = True
-        Me.Label10.BackColor = System.Drawing.Color.Transparent
-        Me.Label10.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.ForeColor = System.Drawing.SystemColors.Window
-        Me.Label10.Location = New System.Drawing.Point(17, 22)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(54, 17)
-        Me.Label10.TabIndex = 7
-        Me.Label10.Text = "Usuario"
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.BackColor = System.Drawing.Color.Transparent
-        Me.Label9.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.ForeColor = System.Drawing.SystemColors.Window
-        Me.Label9.Location = New System.Drawing.Point(17, 53)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(77, 17)
-        Me.Label9.TabIndex = 8
-        Me.Label9.Text = "Contraseña"
+        Me.btsalir.BackColor = System.Drawing.Color.Transparent
+        Me.btsalir.BackgroundImage = Global.SisGabinete.My.Resources.Resources.empleado
+        Me.btsalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.btsalir.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btsalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btsalir.Location = New System.Drawing.Point(272, 88)
+        Me.btsalir.Name = "btsalir"
+        Me.btsalir.Size = New System.Drawing.Size(66, 66)
+        Me.btsalir.TabIndex = 4
+        Me.btsalir.UseVisualStyleBackColor = False
         '
         'btingresar
         '
@@ -385,42 +373,54 @@ Partial Class frmcontenedor
         Me.btingresar.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.btingresar.UseVisualStyleBackColor = False
         '
-        'btsalir
+        'Label9
         '
-        Me.btsalir.BackColor = System.Drawing.Color.Transparent
-        Me.btsalir.BackgroundImage = Global.SisGabinete.My.Resources.Resources.empleado
-        Me.btsalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.btsalir.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btsalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btsalir.Location = New System.Drawing.Point(272, 88)
-        Me.btsalir.Name = "btsalir"
-        Me.btsalir.Size = New System.Drawing.Size(66, 66)
-        Me.btsalir.TabIndex = 4
-        Me.btsalir.UseVisualStyleBackColor = False
+        Me.Label9.AutoSize = True
+        Me.Label9.BackColor = System.Drawing.Color.Transparent
+        Me.Label9.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.ForeColor = System.Drawing.SystemColors.Window
+        Me.Label9.Location = New System.Drawing.Point(17, 53)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(77, 17)
+        Me.Label9.TabIndex = 8
+        Me.Label9.Text = "Contraseña"
         '
-        'Label2
+        'Label10
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.SystemColors.Window
-        Me.Label2.Location = New System.Drawing.Point(129, 168)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(96, 20)
-        Me.Label2.TabIndex = 9
-        Me.Label2.Text = "Iniciar Sesión"
+        Me.Label10.AutoSize = True
+        Me.Label10.BackColor = System.Drawing.Color.Transparent
+        Me.Label10.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.ForeColor = System.Drawing.SystemColors.Window
+        Me.Label10.Location = New System.Drawing.Point(17, 22)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(54, 17)
+        Me.Label10.TabIndex = 7
+        Me.Label10.Text = "Usuario"
         '
-        'Label8
+        'txtpassword
         '
-        Me.Label8.AutoSize = True
-        Me.Label8.BackColor = System.Drawing.Color.Transparent
-        Me.Label8.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.ForeColor = System.Drawing.SystemColors.Window
-        Me.Label8.Location = New System.Drawing.Point(268, 168)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(77, 20)
-        Me.Label8.TabIndex = 10
-        Me.Label8.Text = "Empleado"
+        Me.txtpassword.BackColor = System.Drawing.Color.White
+        Me.txtpassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtpassword.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtpassword.ForeColor = System.Drawing.Color.Black
+        Me.txtpassword.Location = New System.Drawing.Point(100, 51)
+        Me.txtpassword.MaxLength = 10
+        Me.txtpassword.Name = "txtpassword"
+        Me.txtpassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(8226)
+        Me.txtpassword.Size = New System.Drawing.Size(280, 25)
+        Me.txtpassword.TabIndex = 2
+        '
+        'txtuser
+        '
+        Me.txtuser.BackColor = System.Drawing.Color.White
+        Me.txtuser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtuser.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtuser.ForeColor = System.Drawing.Color.Black
+        Me.txtuser.Location = New System.Drawing.Point(100, 20)
+        Me.txtuser.MaxLength = 40
+        Me.txtuser.Name = "txtuser"
+        Me.txtuser.Size = New System.Drawing.Size(280, 25)
+        Me.txtuser.TabIndex = 1
         '
         'frmcontenedor
         '

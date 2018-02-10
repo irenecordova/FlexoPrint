@@ -52,4 +52,8 @@
         frmcontenedor.pnpantallas.Controls.Add(frmventas)
         frmventas.Show()
     End Sub
+
+    Private Sub frmusuario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class
